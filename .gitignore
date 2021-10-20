@@ -1,3 +1,10 @@
+# Project
+data/
+out/
+hydra/
+wandb/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
