@@ -1,7 +1,12 @@
 ---
 dataloaders:
-  base_path: "data/"
-  # Add configuration for separate dataloaders and datasets here.
+  base_path: "./data/"
+  
+  shared_task_3c:
+    special_tokens: ['#AUTHOR_TAG', '#author_tag']
+
+  acl_arc:
+    special_tokens: ['@CITATION', '@citation']
 
 losses:
   weighted_cross_entropy:
@@ -16,13 +21,13 @@ models:
 training:
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "script_test"  # Keep this meaningful.
-  trained_by: "jiviteshjain"
-  trained_on: "personal"
+  run_name: "acl_scibert_test1"  # Keep this meaningful.
+  trained_by: "aakash"
+  trained_on: "ada"
   force_cold_start: False
 
   model_in_use: "maheshwari_et_al"
-  dataset_in_use: "shared_task_3c"
+  dataset_in_use: "acl_arc"
   loss_in_use: "weighted_cross_entropy"
 
   wandb:
@@ -30,10 +35,10 @@ training:
     entity: "why-cite"  # Do not change.
     project: "ours"  # Do not change.
 
-  num_epochs: 2
-  learning_rate: 1e-3
-  train_batch_size: 3
-  val_batch_size: 3
+  num_epochs: 10
+  learning_rate: 1e-4
+  train_batch_size: 4
+  val_batch_size: 4
   num_workers: 2
   train_shuffle: True
   val_shuffle: False

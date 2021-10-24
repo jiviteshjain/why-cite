@@ -1,5 +1,6 @@
 from transformers import AutoModel, AutoTokenizer
 import torch
+from omegaconf.errors import ConfigKeyError
 
 
 class MaheshwariEtAl(torch.nn.Module):
@@ -44,7 +45,13 @@ def get_model(config, device):
     tokenizer = AutoTokenizer.from_pretrained(
         config.models.maheshwari_et_al.pretrained_identifier)
 
-    tokenizer.add_special_tokens({'additional_special_tokens' : ['@citation', '@CITATION']})
+    try:
+        special_tokens = config.dataloaders[
+            config.training.dataset_in_use].special_tokens
+    except ConfigKeyError:
+        special_tokens = []
+
+    tokenizer.add_special_tokens({'additional_special_tokens': special_tokens})
     lang_model.resize_token_embeddings(len(tokenizer))
 
     return MaheshwariEtAl(

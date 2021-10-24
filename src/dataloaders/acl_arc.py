@@ -8,7 +8,7 @@ import jsonlines
 from torch.utils.data import DataLoader, Dataset
 from torch import cuda
 
-intentCatMap = {
+INTENT_CATEGORY_MAP = {
     'Background': 0,
     'Extends': 1,
     'Uses': 2,
@@ -19,7 +19,9 @@ intentCatMap = {
     'Future': 5,
 }
 
+
 class ACLARCDataset(Dataset):
+
     def __init__(self,
                  data,
                  tokenizer,
@@ -40,7 +42,7 @@ class ACLARCDataset(Dataset):
             row = self._preprocess(self._data[index], self._is_test)
         else:
             row = self._data[index]
-            row['target'] = intentCatMap[row['intent']]
+            row['target'] = INTENT_CATEGORY_MAP[row['intent']]
 
         tokenizer_args = {
             'add_special_tokens': True,
@@ -62,9 +64,8 @@ class ACLARCDataset(Dataset):
                                                        text_pair=None,
                                                        **tokenizer_args)
 
-        citation_extended_text = self._tokenizer.encode_plus(row['extended_context'],
-                                                       text_pair=None,
-                                                       **tokenizer_args)
+        citation_extended_text = self._tokenizer.encode_plus(
+            row['extended_context'], text_pair=None, **tokenizer_args)
 
         # Uncomment this to add section name
         # section_name = row['section_name']
@@ -84,17 +85,17 @@ class ACLARCDataset(Dataset):
                 torch.tensor(citation_context['attention_mask'],
                              dtype=torch.long),
             'citation_extended_context_ids':
-                torch.tensor(citation_extended_text['input_ids'], dtype=torch.long),
+                torch.tensor(citation_extended_text['input_ids'],
+                             dtype=torch.long),
             'citation_extended_context_mask':
                 torch.tensor(citation_extended_text['attention_mask'],
-                             dtype=torch.long),                
+                             dtype=torch.long),
         }
 
         if not self._is_test:
             out['target'] = torch.tensor(row['target'], dtype=torch.long)
 
         return out
-        
 
 
 def clean_text(text):
@@ -111,44 +112,46 @@ def preprocess(row, is_test=False):
     }
 
     if not is_test:
-        out['target'] = intentCatMap[row['intent']]
+        out['target'] = INTENT_CATEGORY_MAP[row['intent']]
 
     return out
+
 
 def load_jsonl(path):
     data = jsonlines.open(path)
     return list(data)
 
+
 def get_dataset(config, tokenizer, max_length):
 
-    train_file_path = os.path.join(config.dataloaders.base_path,
-                                   'acl-arc', 'processed_train.jsonl')
-    val_file_path = os.path.join(config.dataloaders.base_path, 
-                                    'acl-arc', 'processed_dev.jsonl')
-    test_file_path = os.path.join(config.dataloaders.base_path, 
-                                    'acl-arc', 'processed_test.jsonl')
+    train_file_path = os.path.join(config.dataloaders.base_path, 'acl-arc',
+                                   'processed_train.jsonl')
+    val_file_path = os.path.join(config.dataloaders.base_path, 'acl-arc',
+                                 'processed_dev.jsonl')
+    test_file_path = os.path.join(config.dataloaders.base_path, 'acl-arc',
+                                  'processed_test.jsonl')
 
     train_data = load_jsonl(train_file_path)
     val_data = load_jsonl(val_file_path)
     test_data = load_jsonl(test_file_path)
 
     train_dataset = ACLARCDataset(train_data,
-                                        tokenizer,
-                                        max_length,
-                                        is_test=False,
-                                        preprocess=preprocess)
+                                  tokenizer,
+                                  max_length,
+                                  is_test=False,
+                                  preprocess=preprocess)
 
     val_dataset = ACLARCDataset(val_data,
-                                      tokenizer,
-                                      max_length,
-                                      is_test=False,
-                                      preprocess=preprocess)
+                                tokenizer,
+                                max_length,
+                                is_test=False,
+                                preprocess=preprocess)
 
     test_dataset = ACLARCDataset(test_data,
-                                      tokenizer,
-                                      max_length,
-                                      is_test=True,
-                                      preprocess=preprocess)
+                                 tokenizer,
+                                 max_length,
+                                 is_test=True,
+                                 preprocess=preprocess)
 
     # The last return value is the test split.
     return train_dataset, val_dataset, test_data
