@@ -1,1 +1,1 @@
-python3 main.py +action=train
+python3 src/main.py +action=train
