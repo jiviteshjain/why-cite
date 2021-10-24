@@ -4,7 +4,7 @@ import torch
 
 class MaheshwariEtAl(torch.nn.Module):
 
-    def __init__(self, lang_model, dropout_probability, device):
+    def __init__(self, lang_model, dropout_probability, config, device):
         super().__init__()
         self._device = device
 
@@ -12,12 +12,20 @@ class MaheshwariEtAl(torch.nn.Module):
         self._pre_classifier = torch.nn.Linear(768, 768)
         self._dropout_layer = torch.nn.Dropout(dropout_probability)
         self._classifier = torch.nn.Linear(768, 6)
+        self._config = config
 
     def forward(self, data):
-        input_ids = data['citation_context_ids'].to(self._device,
-                                                    dtype=torch.long)
-        attention_mask = data['citation_context_mask'].to(self._device,
-                                                          dtype=torch.long)
+
+        if self._config.models.maheshwari_et_al.text.lower() != "extended":
+            input_ids = data['citation_context_ids'].to(self._device,
+                                                        dtype=torch.long)
+            attention_mask = data['citation_context_mask'].to(self._device,
+                                                            dtype=torch.long)
+        else:
+            input_ids = data['citation_extended_context_ids'].to(self._device,
+                                                        dtype=torch.long)
+            attention_mask = data['citation_extended_context_mask'].to(self._device,
+                                                            dtype=torch.long)
 
         embeddings = self._lang_model(input_ids=input_ids,
                                       attention_mask=attention_mask)[0]

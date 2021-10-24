@@ -12,6 +12,7 @@ models:
     max_length: 512  # This is a characteristic of the model.
     dropout_probability: 0
     pretrained_identifier: "allenai/scibert_scivocab_uncased"
+    text: "extended" # Extended / Normal
 
 training:
   out_base_path: "out/"  # The run name will be auto-appended.
