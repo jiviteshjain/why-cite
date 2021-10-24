@@ -12,15 +12,15 @@ models:
     max_length: 512  # This is a characteristic of the model.
     dropout_probability: 0
     pretrained_identifier: "allenai/scibert_scivocab_uncased"
-    text: "normal" # Extended / Normal
+    text: "extended" # Extended / Normal
 
 training:
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "acl_scibert_test1"  # Keep this meaningful.
-  trained_by: "aakash"
-  trained_on: "ada"
-  force_cold_start: False
+  run_name: "acl_scibert_extended"  # Keep this meaningful.
+  trained_by: "jaidev"
+  trained_on: "ada-gnode16"
+  force_cold_start: True
 
   model_in_use: "maheshwari_et_al"
   dataset_in_use: "acl_arc"

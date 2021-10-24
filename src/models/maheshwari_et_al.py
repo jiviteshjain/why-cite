@@ -8,10 +8,12 @@ class MaheshwariEtAl(torch.nn.Module):
         super().__init__()
         self._device = device
 
-        self._lang_model = lang_model
-        self._pre_classifier = torch.nn.Linear(768, 768)
-        self._dropout_layer = torch.nn.Dropout(dropout_probability)
-        self._classifier = torch.nn.Linear(768, 6)
+        print(self._device, "is device")
+
+        self._lang_model = lang_model.to(device)
+        self._pre_classifier = torch.nn.Linear(768, 768).to(device)
+        self._dropout_layer = torch.nn.Dropout(dropout_probability).to(device)
+        self._classifier = torch.nn.Linear(768, 6).to(device)
         self._config = config
 
     def forward(self, data):
@@ -23,7 +25,7 @@ class MaheshwariEtAl(torch.nn.Module):
                                                             dtype=torch.long)
         else:
             input_ids = data['citation_extended_context_ids'].to(self._device,
-                                                        dtype=torch.long)
+                                                            dtype=torch.long)
             attention_mask = data['citation_extended_context_mask'].to(self._device,
                                                             dtype=torch.long)
 

@@ -6,8 +6,7 @@ import torch
 
 
 def weighted_cross_entropy(config, device):
-    weights = torch.FloatTensor(config.losses.weighted_cross_entropy.weights,
-                                device=device)
+    weights = torch.FloatTensor(config.losses.weighted_cross_entropy.weights).to(device)
     return torch.nn.CrossEntropyLoss(weight=weights)
 
 

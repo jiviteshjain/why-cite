@@ -5,7 +5,7 @@ import hydra
 from runner import train, test
 
 
-@hydra.main(config_path='configs/', config_name='acl_arc_test')
+@hydra.main(config_path='configs/', config_name='acl_arc_extended')
 def main(config):
     os.chdir(hydra.utils.get_original_cwd())
 
