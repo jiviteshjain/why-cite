@@ -1,6 +1,6 @@
 ---
 dataloaders:
-  base_path: "../data/"
+  base_path: "./data/"
   # Add configuration for separate dataloaders and datasets here.
 
 losses:

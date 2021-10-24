@@ -34,6 +34,9 @@ def get_model(config, device):
     tokenizer = AutoTokenizer.from_pretrained(
         config.models.maheshwari_et_al.pretrained_identifier)
 
+    tokenizer.add_special_tokens({'additional_special_tokens' : ['@citation', '@CITATION']})
+    lang_model.resize_token_embeddings(len(tokenizer))
+
     return MaheshwariEtAl(
         lang_model, config.models.maheshwari_et_al.dropout_probability,
         device), tokenizer, config.models.maheshwari_et_al.max_length

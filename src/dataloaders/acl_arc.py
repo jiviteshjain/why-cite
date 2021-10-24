@@ -20,7 +20,6 @@ intentCatMap = {
 }
 
 class ACLARCDataset(Dataset):
-
     def __init__(self,
                  data,
                  tokenizer,
@@ -44,7 +43,7 @@ class ACLARCDataset(Dataset):
             row['target'] = intentCatMap[row['intent']]
 
         tokenizer_args = {
-            'add_special_tokens': False,
+            'add_special_tokens': True,
             'max_length': self._max_length,
             'pad_to_max_length': True,
             'return_token_type_ids': True,
@@ -95,6 +94,7 @@ class ACLARCDataset(Dataset):
             out['target'] = torch.tensor(row['target'], dtype=torch.long)
 
         return out
+        
 
 
 def clean_text(text):
