@@ -46,5 +46,5 @@ def get_model(config, device):
     lang_model.resize_token_embeddings(len(tokenizer))
 
     return MaheshwariEtAl(
-        lang_model, config.models.maheshwari_et_al.dropout_probability,
+        lang_model, config.models.maheshwari_et_al.dropout_probability, config,
         device), tokenizer, config.models.maheshwari_et_al.max_length
