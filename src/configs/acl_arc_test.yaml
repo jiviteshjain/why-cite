@@ -1,0 +1,46 @@
+---
+dataloaders:
+  base_path: "../data/"
+  # Add configuration for separate dataloaders and datasets here.
+
+losses:
+  weighted_cross_entropy:
+    weights: [0.30435841, 1.34843581, 2.91375291, 7.57575758, 1.78062678, 1.06837607]
+
+models:
+  maheshwari_et_al:
+    max_length: 512  # This is a characteristic of the model.
+    dropout_probability: 0
+    pretrained_identifier: "allenai/scibert_scivocab_uncased"
+
+training:
+  out_base_path: "out/"  # The run name will be auto-appended.
+  
+  run_name: "acl_test"  # Keep this meaningful.
+  trained_by: "jaidev"
+  trained_on: "personal"
+  force_cold_start: False
+
+  model_in_use: "maheshwari_et_al"
+  dataset_in_use: "acl_arc"
+  loss_in_use: "weighted_cross_entropy"
+
+  wandb:
+    use: True
+    entity: "why-cite"  # Do not change.
+    project: "ours"  # Do not change.
+
+  num_epochs: 2
+  learning_rate: 1e-3
+  train_batch_size: 3
+  val_batch_size: 3
+  num_workers: 2
+  train_shuffle: True
+  val_shuffle: False
+
+inference:
+  model_path: "out/script-test/"  # Make sure to include the run name.
+
+hydra:
+  run:
+    dir: hydra/${training.run_name}

@@ -14,7 +14,9 @@ intentCatMap = {
     'Uses': 2,
     'Motivation': 3,
     'Compare/Contrast': 4,
-    'Future work': 5
+    'CompareOrContrast': 4,
+    'Future work': 5,
+    'Future': 5,
 }
 
 class ACLARCDataset(Dataset):
@@ -120,11 +122,11 @@ def load_jsonl(path):
 def get_dataset(config, tokenizer, max_length):
 
     train_file_path = os.path.join(config.dataloaders.base_path,
-                                   'acl_arc', 'processed_train.jsonl')
+                                   'acl-arc', 'processed_train.jsonl')
     val_file_path = os.path.join(config.dataloaders.base_path, 
-                                    'acl_arc', 'processed_dev.jsonl')
+                                    'acl-arc', 'processed_dev.jsonl')
     test_file_path = os.path.join(config.dataloaders.base_path, 
-                                    'acl_arc', 'processed_test.jsonl')
+                                    'acl-arc', 'processed_test.jsonl')
 
     train_data = load_jsonl(train_file_path)
     val_data = load_jsonl(val_file_path)
