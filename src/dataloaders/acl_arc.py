@@ -7,7 +7,6 @@ import jsonlines
 
 from torch.utils.data import DataLoader, Dataset
 from torch import cuda
-from datasets import ClassLabel
 
 intentCatMap = {
     'Background': 0,

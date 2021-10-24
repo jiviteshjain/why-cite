@@ -5,7 +5,6 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader, Dataset
 from torch import cuda
-from datasets import ClassLabel
 
 
 class SharedTask3CDataset(Dataset):

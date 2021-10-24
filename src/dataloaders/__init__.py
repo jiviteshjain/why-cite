@@ -5,12 +5,13 @@
 
 import os
 
-from . import shared_task_3c
+from . import shared_task_3c, acl_arc
 
 
 def dataloaders(dataset, config, tokenizer, max_length):
     getters = {
         'shared_task_3c': shared_task_3c.get_dataset,
+        'acl_arc': acl_arc.get_dataset
     }
 
     return getters[dataset](config, tokenizer, max_length)
