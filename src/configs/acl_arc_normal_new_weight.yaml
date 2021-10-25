@@ -1,0 +1,47 @@
+---
+dataloaders:
+  base_path: "./data/"
+  # Add configuration for separate dataloaders and datasets here.
+
+losses:
+  weighted_cross_entropy:
+    weights: [1.96, 25.0, 5.26315789, 20.0, 5.5556, 25.0]
+
+models:
+  maheshwari_et_al:
+    max_length: 512  # This is a characteristic of the model.
+    dropout_probability: 0
+    pretrained_identifier: "allenai/scibert_scivocab_uncased"
+    text: "normal" # Extended / Normal
+
+training:
+  out_base_path: "out/"  # The run name will be auto-appended.
+  
+  run_name: "acl_scibert_normal_new_weight"  # Keep this meaningful.
+  trained_by: "aakash"
+  trained_on: "ada"
+  force_cold_start: True
+
+  model_in_use: "maheshwari_et_al"
+  dataset_in_use: "acl_arc"
+  loss_in_use: "weighted_cross_entropy"
+
+  wandb:
+    use: True
+    entity: "why-cite"  # Do not change.
+    project: "ours"  # Do not change.
+
+  num_epochs: 100
+  learning_rate: 1e-4
+  train_batch_size: 4
+  val_batch_size: 4
+  num_workers: 6
+  train_shuffle: True
+  val_shuffle: False
+
+inference:
+  model_path: "out/script-test/"  # Make sure to include the run name.
+
+hydra:
+  run:
+    dir: hydra/${training.run_name}
