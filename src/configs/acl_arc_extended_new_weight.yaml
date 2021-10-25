@@ -5,7 +5,7 @@ dataloaders:
 
 losses:
   weighted_cross_entropy:
-    weights: [0.30435841, 1.34843581, 2.91375291, 7.57575758, 1.78062678, 1.06837607]
+    weights: [1.96, 25.0, 5.26315789, 20.0, 5.5556, 25.0]
 
 models:
   maheshwari_et_al:
@@ -17,9 +17,9 @@ models:
 training:
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "acl_scibert_extended"  # Keep this meaningful.
-  trained_by: "jaidev"
-  trained_on: "ada-gnode16"
+  run_name: "acl_scibert_extended_equal_weight"  # Keep this meaningful.
+  trained_by: "aakash"
+  trained_on: "ada"
   force_cold_start: True
 
   model_in_use: "maheshwari_et_al"
