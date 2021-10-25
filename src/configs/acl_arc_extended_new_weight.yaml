@@ -17,7 +17,7 @@ models:
 training:
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "acl_scibert_extended_equal_weight"  # Keep this meaningful.
+  run_name: "acl_scibert_extended_new_weight"  # Keep this meaningful.
   trained_by: "aakash"
   trained_on: "ada"
   force_cold_start: True
