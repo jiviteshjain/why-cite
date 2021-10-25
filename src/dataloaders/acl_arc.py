@@ -163,8 +163,8 @@ def get_dataset(config, tokenizer, max_length):
         tokenizer,
         max_length,
         is_test=False,
-        mode=config.datasets.acl_arc.mode,
-        section_in_target=config.datasets.acl_arc.section_in_target,
+        mode=config.dataloaders.acl_arc.context,
+        section_in_target=config.dataloaders.acl_arc.section_in_target,
         preprocess=preprocess)
 
     val_dataset = ACLARCDataset(
@@ -172,8 +172,8 @@ def get_dataset(config, tokenizer, max_length):
         tokenizer,
         max_length,
         is_test=False,
-        mode=config.datasets.acl_arc.mode,
-        section_in_target=config.datasets.acl_arc.section_in_target,
+        mode=config.dataloaders.acl_arc.context,
+        section_in_target=config.dataloaders.acl_arc.section_in_target,
         preprocess=preprocess)
 
     test_dataset = ACLARCDataset(
@@ -181,8 +181,8 @@ def get_dataset(config, tokenizer, max_length):
         tokenizer,
         max_length,
         is_test=True,
-        mode=config.datasets.acl_arc.mode,
-        section_in_target=config.datasets.acl_arc.section_in_target,
+        mode=config.dataloaders.acl_arc.context,
+        section_in_target=config.dataloaders.acl_arc.section_in_target,
         preprocess=preprocess)
 
     # The last return value is the test split.

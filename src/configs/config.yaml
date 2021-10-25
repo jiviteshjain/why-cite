@@ -38,7 +38,7 @@ training:
   
   run_name: "acl_scibert_multitask"  # Keep this meaningful.
   trained_by: "jivitesh"
-  trained_on: "personal"
+  trained_on: "joey"
   force_cold_start: True
 
   model_in_use: "two_task_transformer"
@@ -54,7 +54,7 @@ training:
   learning_rate: 1e-4
   train_batch_size: 4
   val_batch_size: 4
-  num_workers: 2
+  num_workers: 0
   train_shuffle: True
   val_shuffle: False
 
