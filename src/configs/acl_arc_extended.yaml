@@ -1,6 +1,10 @@
 ---
 dataloaders:
   base_path: "./data/"
+
+  acl_arc:
+    context: "extended"  # extended/normal
+    section_in_target: True
   # Add configuration for separate dataloaders and datasets here.
 
 losses:
@@ -12,7 +16,6 @@ models:
     max_length: 512  # This is a characteristic of the model.
     dropout_probability: 0
     pretrained_identifier: "allenai/scibert_scivocab_uncased"
-    text: "extended" # Extended / Normal
 
 training:
   out_base_path: "out/"  # The run name will be auto-appended.

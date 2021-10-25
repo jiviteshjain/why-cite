@@ -7,10 +7,19 @@ dataloaders:
 
   acl_arc:
     special_tokens: ['@CITATION', '@citation']
+    context: "extended"  # extended/normal
+    section_in_target: True
 
 losses:
   weighted_cross_entropy:
     weights: [0.30435841, 1.34843581, 2.91375291, 7.57575758, 1.78062678, 1.06837607]
+
+  multi_task_weighted_cross_entropy:
+    num_tasks: 2
+    importance: [1, 0.02]
+    weights:
+      - [0.30435841, 1.34843581, 2.91375291, 7.57575758, 1.78062678, 1.06837607]
+      - [3.20303605313093, 6.298507462686567, 15.486238532110091, 7.033333333333333, 21.367088607594937, 3.6301075268817202]
 
 models:
   maheshwari_et_al:
@@ -18,20 +27,26 @@ models:
     dropout_probability: 0
     pretrained_identifier: "allenai/scibert_scivocab_uncased"
 
+  two_task_transformer:
+    max_length: 512
+    intent_dropout_probability: 0
+    section_dropout_probability: 0
+    pretrained_identifier: "allenai/scibert_scivocab_uncased"
+
 training:
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "acl_scibert_test1"  # Keep this meaningful.
-  trained_by: "aakash"
-  trained_on: "ada"
-  force_cold_start: False
+  run_name: "acl_scibert_multitask"  # Keep this meaningful.
+  trained_by: "jivitesh"
+  trained_on: "personal"
+  force_cold_start: True
 
-  model_in_use: "maheshwari_et_al"
+  model_in_use: "two_task_transformer"
   dataset_in_use: "acl_arc"
-  loss_in_use: "weighted_cross_entropy"
+  loss_in_use: "multi_task_weighted_cross_entropy"
 
   wandb:
-    use: True
+    use: False
     entity: "why-cite"  # Do not change.
     project: "ours"  # Do not change.
 

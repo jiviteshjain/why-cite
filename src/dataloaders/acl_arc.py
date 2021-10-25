@@ -19,6 +19,15 @@ INTENT_CATEGORY_MAP = {
     'Future': 5,
 }
 
+SECTION_CATEGORY_MAP = {
+    'introduction': 0,
+    'related work': 1,
+    'method': 2,
+    'experiments': 3,
+    'conclusion': 4,
+    'unknown': 5
+}
+
 
 class ACLARCDataset(Dataset):
 
@@ -27,11 +36,15 @@ class ACLARCDataset(Dataset):
                  tokenizer,
                  max_length,
                  is_test=False,
+                 mode='normal',
+                 section_in_target=False,
                  preprocess=None):
         self._data = data
         self._tokenizer = tokenizer
         self._max_length = max_length
         self._is_test = is_test
+        self._mode = mode
+        self._section_in_target = section_in_target
         self._preprocess = preprocess
 
     def __len__(self):
@@ -43,6 +56,9 @@ class ACLARCDataset(Dataset):
         else:
             row = self._data[index]
             row['target'] = INTENT_CATEGORY_MAP[row['intent']]
+            section_name = row['section_name'] if row[
+                'section_name'] is not None else 'unknown'
+            row['section_name'] = SECTION_CATEGORY_MAP[section_name]
 
         tokenizer_args = {
             'add_special_tokens': True,
@@ -60,12 +76,13 @@ class ACLARCDataset(Dataset):
                                                   text_pair=None,
                                                   **tokenizer_args)
 
-        citation_context = self._tokenizer.encode_plus(row['text'],
-                                                       text_pair=None,
-                                                       **tokenizer_args)
-
-        citation_extended_text = self._tokenizer.encode_plus(
-            row['extended_context'], text_pair=None, **tokenizer_args)
+        if self._mode.lower() == 'normal':
+            citation_context = self._tokenizer.encode_plus(row['text'],
+                                                           text_pair=None,
+                                                           **tokenizer_args)
+        else:
+            citation_context = self._tokenizer.encode_plus(
+                row['extended_context'], text_pair=None, **tokenizer_args)
 
         # Uncomment this to add section name
         # section_name = row['section_name']
@@ -84,16 +101,17 @@ class ACLARCDataset(Dataset):
             'citation_context_mask':
                 torch.tensor(citation_context['attention_mask'],
                              dtype=torch.long),
-            'citation_extended_context_ids':
-                torch.tensor(citation_extended_text['input_ids'],
-                             dtype=torch.long),
-            'citation_extended_context_mask':
-                torch.tensor(citation_extended_text['attention_mask'],
-                             dtype=torch.long),
         }
 
+        if not self._section_in_target:
+            out['section'] = torch.tensor(row['section_name'])
+
         if not self._is_test:
-            out['target'] = torch.tensor(row['target'], dtype=torch.long)
+            if not self._section_in_target:
+                out['target'] = torch.tensor(row['target'], dtype=torch.long)
+            else:
+                out['target'] = torch.tensor(
+                    [row['target'], row['section_name']], dtype=torch.long)
 
         return out
 
@@ -104,11 +122,16 @@ def clean_text(text):
 
 def preprocess(row, is_test=False):
 
+    section_name = row['section_name'] if row[
+        'section_name'] is not None else 'unknown'
+    section_name = SECTION_CATEGORY_MAP[section_name]
+
     out = {
         'citing_paper_title': clean_text(row['citing_paper_title']),
         'cited_paper_title': clean_text(row['cited_paper_title']),
         'text': clean_text(row['text']),
         'extended_context': clean_text(row['extended_context']),
+        'section_name': section_name,
     }
 
     if not is_test:
@@ -135,23 +158,32 @@ def get_dataset(config, tokenizer, max_length):
     val_data = load_jsonl(val_file_path)
     test_data = load_jsonl(test_file_path)
 
-    train_dataset = ACLARCDataset(train_data,
-                                  tokenizer,
-                                  max_length,
-                                  is_test=False,
-                                  preprocess=preprocess)
+    train_dataset = ACLARCDataset(
+        train_data,
+        tokenizer,
+        max_length,
+        is_test=False,
+        mode=config.datasets.acl_arc.mode,
+        section_in_target=config.datasets.acl_arc.section_in_target,
+        preprocess=preprocess)
 
-    val_dataset = ACLARCDataset(val_data,
-                                tokenizer,
-                                max_length,
-                                is_test=False,
-                                preprocess=preprocess)
+    val_dataset = ACLARCDataset(
+        val_data,
+        tokenizer,
+        max_length,
+        is_test=False,
+        mode=config.datasets.acl_arc.mode,
+        section_in_target=config.datasets.acl_arc.section_in_target,
+        preprocess=preprocess)
 
-    test_dataset = ACLARCDataset(test_data,
-                                 tokenizer,
-                                 max_length,
-                                 is_test=True,
-                                 preprocess=preprocess)
+    test_dataset = ACLARCDataset(
+        test_data,
+        tokenizer,
+        max_length,
+        is_test=True,
+        mode=config.datasets.acl_arc.mode,
+        section_in_target=config.datasets.acl_arc.section_in_target,
+        preprocess=preprocess)
 
     # The last return value is the test split.
-    return train_dataset, val_dataset, test_data
+    return train_dataset, val_dataset, test_dataset

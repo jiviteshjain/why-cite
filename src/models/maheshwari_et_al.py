@@ -5,7 +5,7 @@ from omegaconf.errors import ConfigKeyError
 
 class MaheshwariEtAl(torch.nn.Module):
 
-    def __init__(self, lang_model, dropout_probability, config, device):
+    def __init__(self, lang_model, dropout_probability, device):
         super().__init__()
         self._device = device
 
@@ -15,20 +15,13 @@ class MaheshwariEtAl(torch.nn.Module):
         self._pre_classifier = torch.nn.Linear(768, 768).to(device)
         self._dropout_layer = torch.nn.Dropout(dropout_probability).to(device)
         self._classifier = torch.nn.Linear(768, 6).to(device)
-        self._config = config
 
     def forward(self, data):
 
-        if self._config.models.maheshwari_et_al.text.lower() != "extended":
-            input_ids = data['citation_context_ids'].to(self._device,
-                                                        dtype=torch.long)
-            attention_mask = data['citation_context_mask'].to(self._device,
-                                                            dtype=torch.long)
-        else:
-            input_ids = data['citation_extended_context_ids'].to(self._device,
-                                                            dtype=torch.long)
-            attention_mask = data['citation_extended_context_mask'].to(self._device,
-                                                            dtype=torch.long)
+        input_ids = data['citation_context_ids'].to(self._device,
+                                                    dtype=torch.long)
+        attention_mask = data['citation_context_mask'].to(self._device,
+                                                          dtype=torch.long)
 
         embeddings = self._lang_model(input_ids=input_ids,
                                       attention_mask=attention_mask)[0]
@@ -55,5 +48,5 @@ def get_model(config, device):
     lang_model.resize_token_embeddings(len(tokenizer))
 
     return MaheshwariEtAl(
-        lang_model, config.models.maheshwari_et_al.dropout_probability, config,
+        lang_model, config.models.maheshwari_et_al.dropout_probability,
         device), tokenizer, config.models.maheshwari_et_al.max_length
