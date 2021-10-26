@@ -1,0 +1,5547 @@
+{
+    "text": "Typical examples are Bulgarian ( Simov et al. , 2005 ; Simov and Osenova , 2003 ) , Chinese ( Chen et al. , 2003 ) , Danish ( Kromann , 2003 ) , and Swedish ( Nilsson et al. , 2005 ) .",
+    "citing_paper_id": "W06-2933",
+    "cited_paper_id": "External_18690",
+    "citing_paper_year": 2006,
+    "cited_paper_year": 2003,
+    "citing_paper_title": "a holistic lexiconbased approach to opinion mining",
+    "cited_paper_title": "practical annotation scheme for an hpsg treebank of bulgarian in",
+    "cited_author_ids": [
+      "K Simov",
+      "P Osenova"
+    ],
+    "citing_author_ids": null,
+    "extended_context": "If we start by considering languages with a labeled attachment score of 85 % or higher , they are characterized by high precision and recall for root nodes , typically 95/90 , and by a graceful degradation of attachment score as arcs grow longer , typically 95 -- 90 -- 85 , for arcs of length 1 , 2 and 3 -- 6 . Typical examples are Bulgarian ( Simov et al. , 2005 ; @@CITATION ) , Chinese ( Chen et al. , 2003 ) , Danish ( Kromann , 2003 ) , and Swedish ( Nilsson et al. , 2005 ) . Japanese ( Kawata and Bartels , 2000 ) , despite a very high accuracy , is different in that attachment score drops from 98 % to 85 % , as we go from length 1 to 2 , which may have something to do with the data consisting of transcribed speech with very short utterances .",
+    "section_number": 5,
+    "section_title": null,
+    "intent": "Background",
+    "cite_marker_offset": [
+      55,
+      79
+    ],
+    "sents_before": [
+      [
+        {
+          "index": 1,
+          "word": "Typical",
+          "lemma": "typical",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 490,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 483,
+          "originalText": "Typical",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 2,
+          "word": "examples",
+          "lemma": "example",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 499,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 491,
+          "originalText": "examples",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 3,
+          "word": "are",
+          "lemma": "be",
+          "after": " ",
+          "pos": "VBP",
+          "characterOffsetEnd": 503,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 500,
+          "originalText": "are",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 4,
+          "word": "Bulgarian",
+          "lemma": "bulgarian",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 513,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 504,
+          "originalText": "Bulgarian",
+          "ArgType": "verb",
+          "before": " "
+        },
+        {
+          "index": 5,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 515,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 514,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 6,
+          "word": "Simov",
+          "lemma": "Simov",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 520,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 515,
+          "originalText": "Simov",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 7,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 523,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 521,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 8,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 527,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 524,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 9,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 528,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 527,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 10,
+          "word": "2005",
+          "lemma": "2005",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 533,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 529,
+          "originalText": "2005",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 11,
+          "word": ";",
+          "lemma": ";",
+          "after": " ",
+          "pos": ":",
+          "characterOffsetEnd": 534,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 533,
+          "originalText": ";",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 12,
+          "word": "Simov",
+          "lemma": "Simov",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 540,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 535,
+          "originalText": "Simov",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 13,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 544,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 541,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 14,
+          "word": "Osenova",
+          "lemma": "Osenova",
+          "after": "",
+          "pos": "NNP",
+          "characterOffsetEnd": 552,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 545,
+          "originalText": "Osenova",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 15,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 553,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 552,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 16,
+          "word": "2003",
+          "lemma": "2003",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 558,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 554,
+          "originalText": "2003",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 17,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 559,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 558,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 18,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 560,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 559,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 19,
+          "word": "Chinese",
+          "lemma": "chinese",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 568,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 561,
+          "originalText": "Chinese",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 20,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 570,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 569,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 21,
+          "word": "Chen",
+          "lemma": "Chen",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 574,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 570,
+          "originalText": "Chen",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 22,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 577,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 575,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 23,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 581,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 578,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 24,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 582,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 581,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 25,
+          "word": "2003",
+          "lemma": "2003",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 587,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 583,
+          "originalText": "2003",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 26,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 588,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 587,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 27,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 589,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 588,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 28,
+          "word": "Danish",
+          "lemma": "danish",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 596,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 590,
+          "originalText": "Danish",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 29,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 598,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 597,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 30,
+          "word": "Kromann",
+          "lemma": "Kromann",
+          "after": "",
+          "pos": "NNP",
+          "characterOffsetEnd": 605,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 598,
+          "originalText": "Kromann",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 31,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 606,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 605,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 32,
+          "word": "2003",
+          "lemma": "2003",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 611,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 607,
+          "originalText": "2003",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 33,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 612,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 611,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 34,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 613,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 612,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 35,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 617,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 614,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 36,
+          "word": "Swedish",
+          "lemma": "Swedish",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 625,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 618,
+          "originalText": "Swedish",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 37,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 627,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 626,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 38,
+          "word": "Nilsson",
+          "lemma": "Nilsson",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 634,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 627,
+          "originalText": "Nilsson",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 39,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 637,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 635,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 40,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 641,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 638,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 41,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 642,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 641,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 42,
+          "word": "2005",
+          "lemma": "2005",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 647,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 643,
+          "originalText": "2005",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 43,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 648,
+          "segment_span": [
+            0,
+            43
+          ],
+          "characterOffsetBegin": 647,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 44,
+          "word": ".",
+          "lemma": ".",
+          "after": " ",
+          "pos": ".",
+          "characterOffsetEnd": 649,
+          "characterOffsetBegin": 648,
+          "originalText": ".",
+          "ArgType": null,
+          "before": ""
+        }
+      ],
+      [
+        {
+          "index": 1,
+          "word": "If",
+          "lemma": "if",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 189,
+          "segment_span": [
+            0,
+            3
+          ],
+          "characterOffsetBegin": 187,
+          "originalText": "If",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 2,
+          "word": "we",
+          "lemma": "we",
+          "after": " ",
+          "pos": "PRP",
+          "characterOffsetEnd": 192,
+          "segment_span": [
+            0,
+            3
+          ],
+          "characterOffsetBegin": 190,
+          "originalText": "we",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 3,
+          "word": "start",
+          "characterOffsetEnd": 198,
+          "after": " ",
+          "pos": "VBP",
+          "is_root": true,
+          "lemma": "start",
+          "segment_span": [
+            0,
+            3
+          ],
+          "tense": "P",
+          "characterOffsetBegin": 193,
+          "originalText": "start",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 4,
+          "word": "by",
+          "lemma": "by",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 201,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 199,
+          "originalText": "by",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 5,
+          "word": "considering",
+          "characterOffsetEnd": 213,
+          "after": " ",
+          "pos": "VBG",
+          "is_root": true,
+          "lemma": "consider",
+          "segment_span": [
+            3,
+            16
+          ],
+          "tense": "G",
+          "characterOffsetBegin": 202,
+          "originalText": "considering",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 6,
+          "word": "languages",
+          "lemma": "language",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 223,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 214,
+          "originalText": "languages",
+          "ArgType": "dobj",
+          "before": " "
+        },
+        {
+          "index": 7,
+          "word": "with",
+          "lemma": "with",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 228,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 224,
+          "originalText": "with",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 8,
+          "word": "a",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 230,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 229,
+          "originalText": "a",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 9,
+          "word": "labeled",
+          "lemma": "label",
+          "after": " ",
+          "pos": "VBN",
+          "characterOffsetEnd": 238,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 231,
+          "originalText": "labeled",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 10,
+          "word": "attachment",
+          "lemma": "attachment",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 249,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 239,
+          "originalText": "attachment",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 11,
+          "word": "score",
+          "lemma": "score",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 255,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 250,
+          "originalText": "score",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 12,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 258,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 256,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 13,
+          "word": "85",
+          "lemma": "85",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 261,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 259,
+          "originalText": "85",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 14,
+          "word": "%",
+          "lemma": "%",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 262,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 261,
+          "originalText": "%",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 15,
+          "word": "or",
+          "lemma": "or",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 265,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 263,
+          "originalText": "or",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 16,
+          "word": "higher",
+          "lemma": "higher",
+          "after": "",
+          "pos": "JJR",
+          "characterOffsetEnd": 272,
+          "segment_span": [
+            3,
+            16
+          ],
+          "characterOffsetBegin": 266,
+          "originalText": "higher",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 17,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 273,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 272,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 18,
+          "word": "they",
+          "lemma": "they",
+          "after": " ",
+          "pos": "PRP",
+          "characterOffsetEnd": 278,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 274,
+          "originalText": "they",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 19,
+          "word": "are",
+          "lemma": "be",
+          "after": " ",
+          "pos": "VBP",
+          "characterOffsetEnd": 282,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 279,
+          "originalText": "are",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 20,
+          "word": "characterized",
+          "characterOffsetEnd": 296,
+          "after": " ",
+          "pos": "VBN",
+          "is_root": true,
+          "lemma": "characterize",
+          "segment_span": [
+            16,
+            63
+          ],
+          "tense": "N",
+          "characterOffsetBegin": 283,
+          "before": " ",
+          "originalText": "characterized",
+          "ArgType": null,
+          "is_pass": true
+        },
+        {
+          "index": 21,
+          "word": "by",
+          "lemma": "by",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 299,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 297,
+          "originalText": "by",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 22,
+          "word": "high",
+          "lemma": "high",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 304,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 300,
+          "originalText": "high",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 23,
+          "word": "precision",
+          "lemma": "precision",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 314,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 305,
+          "originalText": "precision",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 24,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 318,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 315,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 25,
+          "word": "recall",
+          "lemma": "recall",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 325,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 319,
+          "originalText": "recall",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 26,
+          "word": "for",
+          "lemma": "for",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 329,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 326,
+          "originalText": "for",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 27,
+          "word": "root",
+          "lemma": "root",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 334,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 330,
+          "originalText": "root",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 28,
+          "word": "nodes",
+          "lemma": "node",
+          "after": "",
+          "pos": "NNS",
+          "characterOffsetEnd": 340,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 335,
+          "originalText": "nodes",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 29,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 341,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 340,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 30,
+          "word": "typically",
+          "lemma": "typically",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 351,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 342,
+          "originalText": "typically",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 31,
+          "word": "95/90",
+          "lemma": "95/90",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 357,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 352,
+          "originalText": "95/90",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 32,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 358,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 357,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 33,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 362,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 359,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 34,
+          "word": "by",
+          "lemma": "by",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 365,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 363,
+          "originalText": "by",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 35,
+          "word": "a",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 367,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 366,
+          "originalText": "a",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 36,
+          "word": "graceful",
+          "lemma": "graceful",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 376,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 368,
+          "originalText": "graceful",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 37,
+          "word": "degradation",
+          "lemma": "degradation",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 388,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 377,
+          "originalText": "degradation",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 38,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 391,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 389,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 39,
+          "word": "attachment",
+          "lemma": "attachment",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 402,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 392,
+          "originalText": "attachment",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 40,
+          "word": "score",
+          "lemma": "score",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 408,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 403,
+          "originalText": "score",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 41,
+          "word": "as",
+          "lemma": "as",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 411,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 409,
+          "originalText": "as",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 42,
+          "word": "arcs",
+          "lemma": "arc",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 416,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 412,
+          "originalText": "arcs",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 43,
+          "word": "grow",
+          "lemma": "grow",
+          "after": " ",
+          "pos": "VBP",
+          "characterOffsetEnd": 421,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 417,
+          "originalText": "grow",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 44,
+          "word": "longer",
+          "lemma": "longer",
+          "after": "",
+          "pos": "RB",
+          "characterOffsetEnd": 428,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 422,
+          "originalText": "longer",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 45,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 429,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 428,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 46,
+          "word": "typically",
+          "lemma": "typically",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 439,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 430,
+          "originalText": "typically",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 47,
+          "word": "95",
+          "lemma": "95",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 442,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 440,
+          "originalText": "95",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 48,
+          "word": "--",
+          "lemma": "--",
+          "after": "",
+          "pos": ":",
+          "characterOffsetEnd": 443,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 442,
+          "originalText": "â",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 49,
+          "word": "90",
+          "lemma": "90",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 445,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 443,
+          "originalText": "90",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 50,
+          "word": "--",
+          "lemma": "--",
+          "after": "",
+          "pos": ":",
+          "characterOffsetEnd": 446,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 445,
+          "originalText": "â",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 51,
+          "word": "85",
+          "lemma": "85",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 448,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 446,
+          "originalText": "85",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 52,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 449,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 448,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 53,
+          "word": "for",
+          "lemma": "for",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 453,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 450,
+          "originalText": "for",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 54,
+          "word": "arcs",
+          "lemma": "arc",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 458,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 454,
+          "originalText": "arcs",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 55,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 461,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 459,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 56,
+          "word": "length",
+          "lemma": "length",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 468,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 462,
+          "originalText": "length",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 57,
+          "word": "1",
+          "lemma": "1",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 470,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 469,
+          "originalText": "1",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 58,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 471,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 470,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 59,
+          "word": "2",
+          "lemma": "2",
+          "after": " ",
+          "pos": "CD",
+          "characterOffsetEnd": 473,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 472,
+          "originalText": "2",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 60,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 477,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 474,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 61,
+          "word": "3",
+          "lemma": "3",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 479,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 478,
+          "originalText": "3",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 62,
+          "word": "--",
+          "lemma": "--",
+          "after": "",
+          "pos": ":",
+          "characterOffsetEnd": 480,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 479,
+          "originalText": "â",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 63,
+          "word": "6",
+          "lemma": "6",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 481,
+          "segment_span": [
+            16,
+            63
+          ],
+          "characterOffsetBegin": 480,
+          "originalText": "6",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 64,
+          "word": ".",
+          "lemma": ".",
+          "after": " ",
+          "pos": ".",
+          "characterOffsetEnd": 482,
+          "characterOffsetBegin": 481,
+          "originalText": ".",
+          "ArgType": null,
+          "before": ""
+        }
+      ],
+      [
+        {
+          "index": 1,
+          "word": "before",
+          "lemma": "before",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 6,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 0,
+          "originalText": "before",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 2,
+          "word": "we",
+          "lemma": "we",
+          "after": " ",
+          "pos": "PRP",
+          "characterOffsetEnd": 9,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 7,
+          "originalText": "we",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 3,
+          "word": "turn",
+          "characterOffsetEnd": 14,
+          "after": " ",
+          "pos": "VBP",
+          "is_root": true,
+          "lemma": "turn",
+          "segment_span": [
+            0,
+            35
+          ],
+          "tense": "P",
+          "characterOffsetBegin": 10,
+          "originalText": "turn",
+          "ArgType": "verb",
+          "before": " "
+        },
+        {
+          "index": 4,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 17,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 15,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 5,
+          "word": "Swedish",
+          "lemma": "Swedish",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 25,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 18,
+          "originalText": "Swedish",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 6,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 29,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 26,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 7,
+          "word": "Turkish",
+          "lemma": "turkish",
+          "after": "",
+          "pos": "JJ",
+          "characterOffsetEnd": 37,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 30,
+          "originalText": "Turkish",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 8,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 38,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 37,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 9,
+          "word": "focusing",
+          "lemma": "focus",
+          "after": " ",
+          "pos": "VBG",
+          "characterOffsetEnd": 47,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 39,
+          "originalText": "focusing",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 10,
+          "word": "on",
+          "lemma": "on",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 50,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 48,
+          "originalText": "on",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 11,
+          "word": "recall",
+          "lemma": "recall",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 57,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 51,
+          "originalText": "recall",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 12,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 61,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 58,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 13,
+          "word": "precision",
+          "lemma": "precision",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 71,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 62,
+          "originalText": "precision",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 14,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 74,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 72,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 15,
+          "word": "root",
+          "lemma": "root",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 79,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 75,
+          "originalText": "root",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 16,
+          "word": "nodes",
+          "lemma": "node",
+          "after": "",
+          "pos": "NNS",
+          "characterOffsetEnd": 85,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 80,
+          "originalText": "nodes",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 17,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 86,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 85,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 18,
+          "word": "as",
+          "lemma": "as",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 89,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 87,
+          "originalText": "as",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 19,
+          "word": "a",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 91,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 90,
+          "originalText": "a",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 20,
+          "word": "reflection",
+          "lemma": "reflection",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 102,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 92,
+          "originalText": "reflection",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 21,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 105,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 103,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 22,
+          "word": "global",
+          "lemma": "global",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 112,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 106,
+          "originalText": "global",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 23,
+          "word": "syntactic",
+          "lemma": "syntactic",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 122,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 113,
+          "originalText": "syntactic",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 24,
+          "word": "structure",
+          "lemma": "structure",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 132,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 123,
+          "originalText": "structure",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 25,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 133,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 132,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 26,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 137,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 134,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 27,
+          "word": "on",
+          "lemma": "on",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 140,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 138,
+          "originalText": "on",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 28,
+          "word": "attachment",
+          "lemma": "attachment",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 151,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 141,
+          "originalText": "attachment",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 29,
+          "word": "score",
+          "lemma": "score",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 157,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 152,
+          "originalText": "score",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 30,
+          "word": "as",
+          "lemma": "as",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 160,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 158,
+          "originalText": "as",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 31,
+          "word": "a",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 162,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 161,
+          "originalText": "a",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 32,
+          "word": "function",
+          "lemma": "function",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 171,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 163,
+          "originalText": "function",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 33,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 174,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 172,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 34,
+          "word": "arc",
+          "lemma": "arc",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 178,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 175,
+          "originalText": "arc",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 35,
+          "word": "length",
+          "lemma": "length",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 185,
+          "segment_span": [
+            0,
+            35
+          ],
+          "characterOffsetBegin": 179,
+          "originalText": "length",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 36,
+          "word": ".",
+          "lemma": ".",
+          "after": " ",
+          "pos": ".",
+          "characterOffsetEnd": 186,
+          "characterOffsetBegin": 185,
+          "originalText": ".",
+          "ArgType": null,
+          "before": ""
+        }
+      ]
+    ],
+    "sents_after": [
+      [
+        {
+          "index": 1,
+          "word": "Japanese",
+          "lemma": "japanese",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 658,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 650,
+          "originalText": "Japanese",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 2,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 660,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 659,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 3,
+          "word": "Kawata",
+          "lemma": "Kawata",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 666,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 660,
+          "originalText": "Kawata",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 4,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 670,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 667,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 5,
+          "word": "Bartels",
+          "lemma": "Bartels",
+          "after": "",
+          "pos": "NNP",
+          "characterOffsetEnd": 678,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 671,
+          "originalText": "Bartels",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 6,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 679,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 678,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 7,
+          "word": "2000",
+          "lemma": "2000",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 684,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 680,
+          "originalText": "2000",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 8,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 685,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 684,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 9,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 686,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 685,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 10,
+          "word": "despite",
+          "lemma": "despite",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 694,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 687,
+          "originalText": "despite",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 11,
+          "word": "a",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 696,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 695,
+          "originalText": "a",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 12,
+          "word": "very",
+          "lemma": "very",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 701,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 697,
+          "originalText": "very",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 13,
+          "word": "high",
+          "lemma": "high",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 706,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 702,
+          "originalText": "high",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 14,
+          "word": "accuracy",
+          "lemma": "accuracy",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 715,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 707,
+          "originalText": "accuracy",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 15,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 716,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 715,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 16,
+          "word": "is",
+          "lemma": "be",
+          "after": " ",
+          "pos": "VBZ",
+          "characterOffsetEnd": 719,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 717,
+          "originalText": "is",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 17,
+          "word": "different",
+          "lemma": "different",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 729,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 720,
+          "originalText": "different",
+          "ArgType": "verb",
+          "before": " "
+        },
+        {
+          "index": 18,
+          "word": "in",
+          "lemma": "in",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 732,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 730,
+          "originalText": "in",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 19,
+          "word": "that",
+          "lemma": "that",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 737,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 733,
+          "originalText": "that",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 20,
+          "word": "attachment",
+          "lemma": "attachment",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 748,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 738,
+          "originalText": "attachment",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 21,
+          "word": "score",
+          "lemma": "score",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 754,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 749,
+          "originalText": "score",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 22,
+          "word": "drops",
+          "lemma": "drop",
+          "after": " ",
+          "pos": "VBZ",
+          "characterOffsetEnd": 760,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 755,
+          "originalText": "drops",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 23,
+          "word": "from",
+          "lemma": "from",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 765,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 761,
+          "originalText": "from",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 24,
+          "word": "98",
+          "lemma": "98",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 768,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 766,
+          "originalText": "98",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 25,
+          "word": "%",
+          "lemma": "%",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 769,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 768,
+          "originalText": "%",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 26,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 772,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 770,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 27,
+          "word": "85",
+          "lemma": "85",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 775,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 773,
+          "originalText": "85",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 28,
+          "word": "%",
+          "lemma": "%",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 776,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 775,
+          "originalText": "%",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 29,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 777,
+          "segment_span": [
+            0,
+            29
+          ],
+          "characterOffsetBegin": 776,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 30,
+          "word": "as",
+          "lemma": "as",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 780,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 778,
+          "originalText": "as",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 31,
+          "word": "we",
+          "lemma": "we",
+          "after": " ",
+          "pos": "PRP",
+          "characterOffsetEnd": 783,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 781,
+          "originalText": "we",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 32,
+          "word": "go",
+          "characterOffsetEnd": 786,
+          "after": " ",
+          "pos": "VBP",
+          "is_root": true,
+          "lemma": "go",
+          "segment_span": [
+            29,
+            38
+          ],
+          "tense": "P",
+          "characterOffsetBegin": 784,
+          "originalText": "go",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 33,
+          "word": "from",
+          "lemma": "from",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 791,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 787,
+          "originalText": "from",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 34,
+          "word": "length",
+          "lemma": "length",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 798,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 792,
+          "originalText": "length",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 35,
+          "word": "1",
+          "lemma": "1",
+          "after": " ",
+          "pos": "CD",
+          "characterOffsetEnd": 800,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 799,
+          "originalText": "1",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 36,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 803,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 801,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 37,
+          "word": "2",
+          "lemma": "2",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 805,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 804,
+          "originalText": "2",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 38,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 806,
+          "segment_span": [
+            29,
+            38
+          ],
+          "characterOffsetBegin": 805,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 39,
+          "word": "which",
+          "lemma": "which",
+          "after": " ",
+          "pos": "WDT",
+          "characterOffsetEnd": 812,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 807,
+          "originalText": "which",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 40,
+          "word": "may",
+          "lemma": "may",
+          "after": " ",
+          "pos": "MD",
+          "characterOffsetEnd": 816,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 813,
+          "originalText": "may",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 41,
+          "word": "have",
+          "characterOffsetEnd": 821,
+          "after": " ",
+          "pos": "VB",
+          "is_root": true,
+          "lemma": "have",
+          "segment_span": [
+            38,
+            55
+          ],
+          "tense": "B",
+          "characterOffsetBegin": 817,
+          "originalText": "have",
+          "has_aux": true,
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 42,
+          "word": "something",
+          "lemma": "something",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 831,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 822,
+          "originalText": "something",
+          "ArgType": "dobj",
+          "before": " "
+        },
+        {
+          "index": 43,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 834,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 832,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 44,
+          "word": "do",
+          "lemma": "do",
+          "after": " ",
+          "pos": "VB",
+          "characterOffsetEnd": 837,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 835,
+          "originalText": "do",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 45,
+          "word": "with",
+          "lemma": "with",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 842,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 838,
+          "originalText": "with",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 46,
+          "word": "the",
+          "lemma": "the",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 846,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 843,
+          "originalText": "the",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 47,
+          "word": "data",
+          "lemma": "datum",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 851,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 847,
+          "originalText": "data",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 48,
+          "word": "consisting",
+          "lemma": "consist",
+          "after": " ",
+          "pos": "VBG",
+          "characterOffsetEnd": 862,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 852,
+          "originalText": "consisting",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 49,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 865,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 863,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 50,
+          "word": "transcribed",
+          "lemma": "transcribe",
+          "after": " ",
+          "pos": "VBN",
+          "characterOffsetEnd": 877,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 866,
+          "originalText": "transcribed",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 51,
+          "word": "speech",
+          "lemma": "speech",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 884,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 878,
+          "originalText": "speech",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 52,
+          "word": "with",
+          "lemma": "with",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 889,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 885,
+          "originalText": "with",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 53,
+          "word": "very",
+          "lemma": "very",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 894,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 890,
+          "originalText": "very",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 54,
+          "word": "short",
+          "lemma": "short",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 900,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 895,
+          "originalText": "short",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 55,
+          "word": "utterances",
+          "lemma": "utterance",
+          "after": "",
+          "pos": "NNS",
+          "characterOffsetEnd": 911,
+          "segment_span": [
+            38,
+            55
+          ],
+          "characterOffsetBegin": 901,
+          "originalText": "utterances",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 56,
+          "word": ".",
+          "lemma": ".",
+          "after": " ",
+          "pos": ".",
+          "characterOffsetEnd": 912,
+          "characterOffsetBegin": 911,
+          "originalText": ".",
+          "ArgType": null,
+          "before": ""
+        }
+      ],
+      [
+        {
+          "index": 1,
+          "word": "A",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 914,
+          "segment_span": [
+            0,
+            4
+          ],
+          "characterOffsetBegin": 913,
+          "originalText": "A",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 2,
+          "word": "second",
+          "lemma": "second",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 921,
+          "segment_span": [
+            0,
+            4
+          ],
+          "characterOffsetBegin": 915,
+          "originalText": "second",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 3,
+          "word": "observation",
+          "lemma": "observation",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 933,
+          "segment_span": [
+            0,
+            4
+          ],
+          "characterOffsetBegin": 922,
+          "originalText": "observation",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 4,
+          "word": "is",
+          "characterOffsetEnd": 936,
+          "after": " ",
+          "pos": "VBZ",
+          "is_root": true,
+          "lemma": "be",
+          "segment_span": [
+            0,
+            4
+          ],
+          "tense": "Z",
+          "characterOffsetBegin": 934,
+          "originalText": "is",
+          "ArgType": "verb",
+          "before": " "
+        },
+        {
+          "index": 5,
+          "word": "that",
+          "lemma": "that",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 941,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 937,
+          "originalText": "that",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 6,
+          "word": "a",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 943,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 942,
+          "originalText": "a",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 7,
+          "word": "high",
+          "lemma": "high",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 948,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 944,
+          "originalText": "high",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 8,
+          "word": "proportion",
+          "lemma": "proportion",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 959,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 949,
+          "originalText": "proportion",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 9,
+          "word": "of",
+          "lemma": "of",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 962,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 960,
+          "originalText": "of",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 10,
+          "word": "non-projective",
+          "lemma": "non-projective",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 977,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 963,
+          "originalText": "non-projective",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 11,
+          "word": "structures",
+          "lemma": "structure",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 988,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 978,
+          "originalText": "structures",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 12,
+          "word": "leads",
+          "characterOffsetEnd": 994,
+          "after": " ",
+          "pos": "VBZ",
+          "is_root": true,
+          "lemma": "lead",
+          "segment_span": [
+            4,
+            25
+          ],
+          "tense": "Z",
+          "characterOffsetBegin": 989,
+          "originalText": "leads",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 13,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 997,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 995,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 14,
+          "word": "fragmentation",
+          "lemma": "fragmentation",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1011,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 998,
+          "originalText": "fragmentation",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 15,
+          "word": "in",
+          "lemma": "in",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1014,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1012,
+          "originalText": "in",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 16,
+          "word": "the",
+          "lemma": "the",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 1018,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1015,
+          "originalText": "the",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 17,
+          "word": "parser",
+          "lemma": "parser",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1025,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1019,
+          "originalText": "parser",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 18,
+          "word": "output",
+          "lemma": "output",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 1032,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1026,
+          "originalText": "output",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 19,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1033,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1032,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 20,
+          "word": "reflected",
+          "lemma": "reflect",
+          "after": " ",
+          "pos": "VBN",
+          "characterOffsetEnd": 1043,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1034,
+          "originalText": "reflected",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 21,
+          "word": "in",
+          "lemma": "in",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1046,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1044,
+          "originalText": "in",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 22,
+          "word": "lower",
+          "lemma": "lower",
+          "after": " ",
+          "pos": "JJR",
+          "characterOffsetEnd": 1052,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1047,
+          "originalText": "lower",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 23,
+          "word": "precision",
+          "lemma": "precision",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1062,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1053,
+          "originalText": "precision",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 24,
+          "word": "for",
+          "lemma": "for",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1066,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1063,
+          "originalText": "for",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 25,
+          "word": "roots",
+          "lemma": "root",
+          "after": "",
+          "pos": "NNS",
+          "characterOffsetEnd": 1072,
+          "segment_span": [
+            4,
+            25
+          ],
+          "characterOffsetBegin": 1067,
+          "originalText": "roots",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 26,
+          "word": ".",
+          "lemma": ".",
+          "after": " ",
+          "pos": ".",
+          "characterOffsetEnd": 1073,
+          "characterOffsetBegin": 1072,
+          "originalText": ".",
+          "ArgType": null,
+          "before": ""
+        }
+      ],
+      [
+        {
+          "index": 1,
+          "word": "This",
+          "lemma": "this",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 1078,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1074,
+          "originalText": "This",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 2,
+          "word": "is",
+          "lemma": "be",
+          "after": " ",
+          "pos": "VBZ",
+          "characterOffsetEnd": 1081,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1079,
+          "originalText": "is",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 3,
+          "word": "noticeable",
+          "lemma": "noticeable",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1092,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1082,
+          "originalText": "noticeable",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 4,
+          "word": "for",
+          "lemma": "for",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1096,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1093,
+          "originalText": "for",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 5,
+          "word": "German",
+          "lemma": "german",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1103,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1097,
+          "originalText": "German",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 6,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 1105,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1104,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 7,
+          "word": "Brants",
+          "lemma": "Brants",
+          "after": " ",
+          "pos": "NNPS",
+          "characterOffsetEnd": 1111,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1105,
+          "originalText": "Brants",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 8,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 1114,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1112,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 9,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 1118,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1115,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 10,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1119,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1118,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 11,
+          "word": "2002",
+          "lemma": "2002",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1124,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1120,
+          "originalText": "2002",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 12,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": " ",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 1125,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1124,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 13,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 1129,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1126,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 14,
+          "word": "Portuguese",
+          "lemma": "portuguese",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1140,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1130,
+          "originalText": "Portuguese",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 15,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 1142,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1141,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 16,
+          "word": "Afonso",
+          "lemma": "Afonso",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 1148,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1142,
+          "originalText": "Afonso",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 17,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 1151,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1149,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 18,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 1155,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1152,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 19,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1156,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1155,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 20,
+          "word": "2002",
+          "lemma": "2002",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1161,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1157,
+          "originalText": "2002",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 21,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 1162,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1161,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 22,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1163,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1162,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 23,
+          "word": "which",
+          "lemma": "which",
+          "after": " ",
+          "pos": "WDT",
+          "characterOffsetEnd": 1169,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1164,
+          "originalText": "which",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 24,
+          "word": "still",
+          "lemma": "still",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 1175,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1170,
+          "originalText": "still",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 25,
+          "word": "have",
+          "characterOffsetEnd": 1180,
+          "after": " ",
+          "pos": "VBP",
+          "is_root": true,
+          "lemma": "have",
+          "segment_span": [
+            22,
+            34
+          ],
+          "tense": "P",
+          "characterOffsetBegin": 1176,
+          "originalText": "have",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 26,
+          "word": "high",
+          "lemma": "high",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1185,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1181,
+          "originalText": "high",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 27,
+          "word": "overall",
+          "lemma": "overall",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1193,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1186,
+          "originalText": "overall",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 28,
+          "word": "accuracy",
+          "lemma": "accuracy",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1202,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1194,
+          "originalText": "accuracy",
+          "ArgType": "dobj",
+          "before": " "
+        },
+        {
+          "index": 29,
+          "word": "thanks",
+          "lemma": "thanks",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 1209,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1203,
+          "originalText": "thanks",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 30,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 1212,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1210,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 31,
+          "word": "very",
+          "lemma": "very",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 1217,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1213,
+          "originalText": "very",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 32,
+          "word": "high",
+          "lemma": "high",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1222,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1218,
+          "originalText": "high",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 33,
+          "word": "attachment",
+          "lemma": "attachment",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1233,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1223,
+          "originalText": "attachment",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 34,
+          "word": "scores",
+          "lemma": "score",
+          "after": "",
+          "pos": "NNS",
+          "characterOffsetEnd": 1240,
+          "segment_span": [
+            22,
+            34
+          ],
+          "characterOffsetBegin": 1234,
+          "originalText": "scores",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 35,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1241,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1240,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 36,
+          "word": "but",
+          "lemma": "but",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 1245,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1242,
+          "originalText": "but",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 37,
+          "word": "much",
+          "lemma": "much",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 1250,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1246,
+          "originalText": "much",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 38,
+          "word": "more",
+          "lemma": "more",
+          "after": " ",
+          "pos": "RBR",
+          "characterOffsetEnd": 1255,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1251,
+          "originalText": "more",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 39,
+          "word": "conspicuous",
+          "lemma": "conspicuous",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1267,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1256,
+          "originalText": "conspicuous",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 40,
+          "word": "for",
+          "lemma": "for",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1271,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1268,
+          "originalText": "for",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 41,
+          "word": "Czech",
+          "lemma": "Czech",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 1277,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1272,
+          "originalText": "Czech",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 42,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 1279,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1278,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 43,
+          "word": "B",
+          "lemma": "B",
+          "after": "",
+          "pos": "NNP",
+          "characterOffsetEnd": 1280,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1279,
+          "originalText": "B",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 44,
+          "word": "Â¨",
+          "lemma": "Â¨",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1281,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1280,
+          "originalText": "Â¨",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 45,
+          "word": "ohmov",
+          "lemma": "ohmov",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 1286,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1281,
+          "originalText": "ohmov",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 46,
+          "word": "Â´",
+          "lemma": "Â´",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1287,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1286,
+          "originalText": "Â´",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 47,
+          "word": "a",
+          "lemma": "a",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 1288,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1287,
+          "originalText": "a",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 48,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 1291,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1289,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 49,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 1295,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1292,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 50,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1296,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1295,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 51,
+          "word": "2003",
+          "lemma": "2003",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1301,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1297,
+          "originalText": "2003",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 52,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 1302,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1301,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 53,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1303,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1302,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 54,
+          "word": "Dutch",
+          "lemma": "dutch",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1309,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1304,
+          "originalText": "Dutch",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 55,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 1311,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1310,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 56,
+          "word": "van",
+          "lemma": "van",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1314,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1311,
+          "originalText": "van",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 57,
+          "word": "der",
+          "lemma": "der",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1318,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1315,
+          "originalText": "der",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 58,
+          "word": "Beek",
+          "lemma": "Beek",
+          "after": " ",
+          "pos": "NNP",
+          "characterOffsetEnd": 1323,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1319,
+          "originalText": "Beek",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 59,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 1326,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1324,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 60,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 1330,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1327,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 61,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1331,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1330,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 62,
+          "word": "2002",
+          "lemma": "2002",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1336,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1332,
+          "originalText": "2002",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 63,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": " ",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 1337,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1336,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 64,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 1341,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1338,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 65,
+          "word": "Slovene",
+          "lemma": "slovene",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1349,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1342,
+          "originalText": "Slovene",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 66,
+          "word": "(",
+          "lemma": "-lrb-",
+          "after": "",
+          "pos": "-LRB-",
+          "characterOffsetEnd": 1351,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1350,
+          "originalText": "(",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 67,
+          "word": "DËzeroski",
+          "lemma": "dËzeroski",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1360,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1351,
+          "originalText": "DËzeroski",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 68,
+          "word": "et",
+          "lemma": "et",
+          "after": " ",
+          "pos": "FW",
+          "characterOffsetEnd": 1363,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1361,
+          "originalText": "et",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 69,
+          "word": "al.",
+          "lemma": "al.",
+          "after": "",
+          "pos": "FW",
+          "characterOffsetEnd": 1367,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1364,
+          "originalText": "al.",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 70,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1368,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1367,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 71,
+          "word": "2006",
+          "lemma": "2006",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1373,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1369,
+          "originalText": "2006",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 72,
+          "word": ")",
+          "lemma": "-rrb-",
+          "after": "",
+          "pos": "-RRB-",
+          "characterOffsetEnd": 1374,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1373,
+          "originalText": ")",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 73,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1375,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1374,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 74,
+          "word": "where",
+          "lemma": "where",
+          "after": " ",
+          "pos": "WRB",
+          "characterOffsetEnd": 1381,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1376,
+          "originalText": "where",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 75,
+          "word": "root",
+          "lemma": "root",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1386,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1382,
+          "originalText": "root",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 76,
+          "word": "precision",
+          "lemma": "precision",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1396,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1387,
+          "originalText": "precision",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 77,
+          "word": "drops",
+          "characterOffsetEnd": 1402,
+          "after": " ",
+          "pos": "VBZ",
+          "is_root": true,
+          "lemma": "drop",
+          "segment_span": [
+            73,
+            83
+          ],
+          "tense": "Z",
+          "characterOffsetBegin": 1397,
+          "originalText": "drops",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 78,
+          "word": "more",
+          "lemma": "more",
+          "after": " ",
+          "pos": "RBR",
+          "characterOffsetEnd": 1407,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1403,
+          "originalText": "more",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 79,
+          "word": "drastically",
+          "lemma": "drastically",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 1419,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1408,
+          "originalText": "drastically",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 80,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 1422,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1420,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 81,
+          "word": "about",
+          "lemma": "about",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1428,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1423,
+          "originalText": "about",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 82,
+          "word": "69",
+          "lemma": "69",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1431,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1429,
+          "originalText": "69",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 83,
+          "word": "%",
+          "lemma": "%",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 1432,
+          "segment_span": [
+            73,
+            83
+          ],
+          "characterOffsetBegin": 1431,
+          "originalText": "%",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 84,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1433,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1432,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 85,
+          "word": "71",
+          "lemma": "71",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1436,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1434,
+          "originalText": "71",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 86,
+          "word": "%",
+          "lemma": "%",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1437,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1436,
+          "originalText": "%",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 87,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 1441,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1438,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 88,
+          "word": "41",
+          "lemma": "41",
+          "after": "",
+          "pos": "CD",
+          "characterOffsetEnd": 1444,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1442,
+          "originalText": "41",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 89,
+          "word": "%",
+          "lemma": "%",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 1445,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1444,
+          "originalText": "%",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 90,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1446,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1445,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 91,
+          "word": "respectively",
+          "lemma": "respectively",
+          "after": "",
+          "pos": "RB",
+          "characterOffsetEnd": 1459,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1447,
+          "originalText": "respectively",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 92,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1460,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1459,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 93,
+          "word": "and",
+          "lemma": "and",
+          "after": " ",
+          "pos": "CC",
+          "characterOffsetEnd": 1464,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1461,
+          "originalText": "and",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 94,
+          "word": "root",
+          "lemma": "root",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1469,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1465,
+          "originalText": "root",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 95,
+          "word": "recall",
+          "lemma": "recall",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1476,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1470,
+          "originalText": "recall",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 96,
+          "word": "is",
+          "lemma": "be",
+          "after": " ",
+          "pos": "VBZ",
+          "characterOffsetEnd": 1479,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1477,
+          "originalText": "is",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 97,
+          "word": "also",
+          "lemma": "also",
+          "after": " ",
+          "pos": "RB",
+          "characterOffsetEnd": 1484,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1480,
+          "originalText": "also",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 98,
+          "word": "affected",
+          "characterOffsetEnd": 1493,
+          "after": " ",
+          "pos": "VBN",
+          "is_root": true,
+          "lemma": "affect",
+          "segment_span": [
+            0,
+            99
+          ],
+          "tense": "N",
+          "characterOffsetBegin": 1485,
+          "before": " ",
+          "originalText": "affected",
+          "ArgType": null,
+          "is_pass": true
+        },
+        {
+          "index": 99,
+          "word": "negatively",
+          "lemma": "negatively",
+          "after": "",
+          "pos": "RB",
+          "characterOffsetEnd": 1504,
+          "segment_span": [
+            0,
+            99
+          ],
+          "characterOffsetBegin": 1494,
+          "originalText": "negatively",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 100,
+          "word": ".",
+          "lemma": ".",
+          "after": " ",
+          "pos": ".",
+          "characterOffsetEnd": 1505,
+          "characterOffsetBegin": 1504,
+          "originalText": ".",
+          "ArgType": null,
+          "before": ""
+        }
+      ],
+      [
+        {
+          "index": 1,
+          "word": "On",
+          "lemma": "on",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1508,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1506,
+          "originalText": "On",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 2,
+          "word": "the",
+          "lemma": "the",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 1512,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1509,
+          "originalText": "the",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 3,
+          "word": "other",
+          "lemma": "other",
+          "after": " ",
+          "pos": "JJ",
+          "characterOffsetEnd": 1518,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1513,
+          "originalText": "other",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 4,
+          "word": "hand",
+          "lemma": "hand",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 1523,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1519,
+          "originalText": "hand",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 5,
+          "word": ",",
+          "lemma": ",",
+          "after": " ",
+          "pos": ",",
+          "characterOffsetEnd": 1524,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1523,
+          "originalText": ",",
+          "ArgType": null,
+          "before": ""
+        },
+        {
+          "index": 6,
+          "word": "all",
+          "lemma": "all",
+          "after": " ",
+          "pos": "DT",
+          "characterOffsetEnd": 1528,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1525,
+          "originalText": "all",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 7,
+          "word": "three",
+          "lemma": "three",
+          "after": " ",
+          "pos": "CD",
+          "characterOffsetEnd": 1534,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1529,
+          "originalText": "three",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 8,
+          "word": "languages",
+          "lemma": "language",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 1544,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1535,
+          "originalText": "languages",
+          "ArgType": "subj",
+          "before": " "
+        },
+        {
+          "index": 9,
+          "word": "behave",
+          "characterOffsetEnd": 1551,
+          "after": " ",
+          "pos": "VBP",
+          "is_root": true,
+          "lemma": "behave",
+          "segment_span": [
+            0,
+            17
+          ],
+          "tense": "P",
+          "characterOffsetBegin": 1545,
+          "originalText": "behave",
+          "ArgType": "verb",
+          "before": " "
+        },
+        {
+          "index": 10,
+          "word": "like",
+          "lemma": "like",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1556,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1552,
+          "originalText": "like",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 11,
+          "word": "high-accuracy",
+          "lemma": "high-accuracy",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1570,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1557,
+          "originalText": "high-accuracy",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 12,
+          "word": "languages",
+          "lemma": "language",
+          "after": " ",
+          "pos": "NNS",
+          "characterOffsetEnd": 1580,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1571,
+          "originalText": "languages",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 13,
+          "word": "with",
+          "lemma": "with",
+          "after": " ",
+          "pos": "IN",
+          "characterOffsetEnd": 1585,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1581,
+          "originalText": "with",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 14,
+          "word": "respect",
+          "lemma": "respect",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1593,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1586,
+          "originalText": "respect",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 15,
+          "word": "to",
+          "lemma": "to",
+          "after": " ",
+          "pos": "TO",
+          "characterOffsetEnd": 1596,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1594,
+          "originalText": "to",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 16,
+          "word": "attachment",
+          "lemma": "attachment",
+          "after": " ",
+          "pos": "NN",
+          "characterOffsetEnd": 1607,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1597,
+          "originalText": "attachment",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 17,
+          "word": "score",
+          "lemma": "score",
+          "after": "",
+          "pos": "NN",
+          "characterOffsetEnd": 1613,
+          "segment_span": [
+            0,
+            17
+          ],
+          "characterOffsetBegin": 1608,
+          "originalText": "score",
+          "ArgType": null,
+          "before": " "
+        },
+        {
+          "index": 18,
+          "word": ".",
+          "lemma": ".",
+          "after": " ",
+          "pos": ".",
+          "characterOffsetEnd": 1614,
+          "characterOffsetBegin": 1613,
+          "originalText": ".",
+          "ArgType": null,
+          "before": ""
+        }
+      ]
+    ],
+    "cleaned_cite_text": "Typical examples are Bulgarian ( Simov et al. , 2005 ; @@CITATION ) , Chinese ( Chen et al. , 2003 ) , Danish ( Kromann , 2003 ) , and Swedish ( Nilsson et al. , 2005 ) .",
+    "citation_id": "W06-2933_16",
+    "citation_excerpt_index": 0,
+    "section_name": "experiments"
+  }

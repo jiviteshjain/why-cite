@@ -9,6 +9,9 @@ dataloaders:
     special_tokens: ['@CITATION', '@citation']
     context: "extended"  # extended/normal
     section_in_target: True
+  
+  scicite:
+    section_in_target: True
 
 losses:
   weighted_cross_entropy:
