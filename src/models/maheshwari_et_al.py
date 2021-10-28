@@ -14,6 +14,7 @@ class MaheshwariEtAl(torch.nn.Module):
         self._lang_model = lang_model.to(device)
         self._pre_classifier = torch.nn.Linear(768, 768).to(device)
         self._dropout_layer = torch.nn.Dropout(dropout_probability).to(device)
+	# change to 3 when running on scicite dataset
         self._classifier = torch.nn.Linear(768, 6).to(device)
 
     def forward(self, data):

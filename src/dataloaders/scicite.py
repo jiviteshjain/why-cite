@@ -118,7 +118,7 @@ def preprocess(row, is_test=False):
     section_name = SECTION_CATEGORY_MAP[section_name]
 
     out = {
-        'text': clean_text(row['text']),
+        'string': clean_text(row['string']),
         'extended_context': clean_text(row['string']),
         'section_name': section_name,
     }
@@ -146,6 +146,8 @@ def get_dataset(config, tokenizer, max_length):
     train_data = load_jsonl(train_file_path)
     val_data = load_jsonl(val_file_path)
     test_data = load_jsonl(test_file_path)
+
+    print(config.dataloaders)
 
     train_dataset = SciCiteDataset(
         train_data,

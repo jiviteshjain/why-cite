@@ -2,10 +2,15 @@
 dataloaders:
   base_path: "./data/"
   # Add configuration for separate dataloaders and datasets here.
+  scicite:
+    section_in_target: False
+    special_tokens: []
+
 
 losses:
   weighted_cross_entropy:
-    weights: [1,1,1,1,1,1]
+    weights: [1.72, 3.44, 7.69]
+
 
 models:
   maheshwari_et_al:
@@ -17,7 +22,7 @@ models:
 training:
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "scicite_scibert_equal_weights"  # Keep this meaningful.
+  run_name: "scicite_scibert_normal_weights"  # Keep this meaningful.
   trained_by: "pooja"
   trained_on: "ada"
   force_cold_start: True
@@ -32,7 +37,7 @@ training:
     project: "ours"  # Do not change.
 
   num_epochs: 100
-  learning_rate: 1e-4
+  learning_rate: 1e-5
   train_batch_size: 4
   val_batch_size: 4
   num_workers: 6
