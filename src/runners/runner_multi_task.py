@@ -25,6 +25,8 @@ class Runner:
         self._device = device
 
     def _restore(self, model, optimizer, which='last', epoch=None):
+        # BEST EPOCH IS DEFINED IN TERMS OF TASK 1 VAL MACRO F1 ONLY.
+
         loop_state = torch.load(
             os.path.join(self._config.training.out_base_path,
                          self._config.training.run_name, 'logs',
@@ -68,27 +70,42 @@ class Runner:
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
         return {
-            # The 'best' epoch is only defined in terms of val mico f1.
             'best_epoch': loop_state['best_epoch'],
             'best_val_loss': loop_state['best_val_loss'],
             'best_val_accuracy': loop_state['best_val_accuracy'],
-            'best_val_micro_f1': loop_state['best_val_micro_f1'],
+            'best_val_macro_f1': loop_state['best_val_macro_f1'],
             'best_val_precision': loop_state['best_val_precision'],
             'best_val_recall': loop_state['best_val_recall'],
             #
             'checkpoint_epoch': checkpoint['epoch'],
             #
-            'checkpoint_val_loss': checkpoint['val_loss'],
-            'checkpoint_val_accuracy': checkpoint['val_accuracy'],
-            'checkpoint_val_micro_f1': checkpoint['val_micro_f1'],
-            'checkpoint_val_precision': checkpoint['val_precision'],
-            'checkpoint_val_recall': checkpoint['val_recall'],
+            'task_1' : {
+                'checkpoint_val_loss': checkpoint['task1_val_loss'],
+                'checkpoint_val_accuracy': checkpoint['task1_val_accuracy'],
+                'checkpoint_val_macro_f1': checkpoint['task1_val_macro_f1'],
+                'checkpoint_val_precision': checkpoint['task1_val_precision'],
+                'checkpoint_val_recall': checkpoint['task1_val_recall'],
+                #
+                'checkpoint_train_loss': checkpoint['task1_train_loss'],
+                'checkpoint_train_accuracy': checkpoint['task1_train_accuracy'],
+                'checkpoint_train_macro_f1': checkpoint['task1_train_macro_f1'],
+                'checkpoint_train_precision': checkpoint['task1_train_precision'],
+                'checkpoint_train_recall': checkpoint['task1_train_recall'],
+            }, 
             #
-            'checkpoint_train_loss': checkpoint['train_loss'],
-            'checkpoint_train_accuracy': checkpoint['train_accuracy'],
-            'checkpoint_train_micro_f1': checkpoint['train_micro_f1'],
-            'checkpoint_train_precision': checkpoint['train_precision'],
-            'checkpoint_train_recall': checkpoint['train_recall'],
+            'task_2' : {
+                'checkpoint_val_loss': checkpoint['task2_val_loss'],
+                'checkpoint_val_accuracy': checkpoint['task2_val_accuracy'],
+                'checkpoint_val_macro_f1': checkpoint['task2_val_macro_f1'],
+                'checkpoint_val_precision': checkpoint['task2_val_precision'],
+                'checkpoint_val_recall': checkpoint['task2_val_recall'],
+                #
+                'checkpoint_train_loss': checkpoint['task2_train_loss'],
+                'checkpoint_train_accuracy': checkpoint['task2_train_accuracy'],
+                'checkpoint_train_macro_f1': checkpoint['task2_train_macro_f1'],
+                'checkpoint_train_precision': checkpoint['task2_train_precision'],
+                'checkpoint_train_recall': checkpoint['task2_train_recall'],
+            }, 
         }
 
     def _log_epoch(self, train_metrics, val_metrics, best_val_metrics, model,
@@ -100,17 +117,23 @@ class Runner:
 
         # CHECK IF IMPROVED VAL PERFORMANCE.
 
-        improved = val_metrics['micro_f1'] > best_val_metrics[
-            'micro_f1']  # Always true on the first epoch.
+        improved = val_metrics[0]['macro_f1'] > best_val_metrics[
+            'macro_f1']  # Always true on the first epoch.
         if improved:
-            best_val_metrics = copy.deepcopy(val_metrics)
+            best_val_metrics = copy.deepcopy(val_metrics[0])
 
         # LOG TO WANDB.
 
         if self._config.training.wandb.use:
             wandb.log({
-                'train_metrics': train_metrics,
-                'val_metrics': val_metrics
+                'task1': {
+                    'train_metrics': train_metrics[0],
+                    'val_metrics': val_metrics[0],
+                },
+                'task2': {
+                    'train_metrics': train_metrics[1],
+                    'val_metrics': val_metrics[1],
+                }
             })
 
             if improved:
@@ -119,19 +142,23 @@ class Runner:
                 wandb.run.summary['best_epoch'] = epoch
 
         # SAVE CHECKPOINT.
+        if self._config.training.save_weights:
+            checkpoint = {
+                'model_state_dict': model.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+                'epoch': epoch,
+            }
+            for k, v in train_metrics[0].items():
+                checkpoint[f'task1_train_{k}'] = v
+            for k, v in val_metrics[0].items():
+                checkpoint[f'task1_val_{k}'] = v
+            for k, v in train_metrics[1].items():
+                checkpoint[f'task2_train_{k}'] = v
+            for k, v in val_metrics[1].items():
+                checkpoint[f'task2_val_{k}'] = v
 
-        checkpoint = {
-            'model_state_dict': model.state_dict(),
-            'optimizer_state_dict': optimizer.state_dict(),
-            'epoch': epoch,
-        }
-        for k, v in train_metrics.items():
-            checkpoint[f'train_{k}'] = v
-        for k, v in val_metrics.items():
-            checkpoint[f'val_{k}'] = v
-
-        torch.save(checkpoint,
-                   os.path.join(out_path, 'weights', f'checkpoint_{epoch}.pt'))
+            torch.save(checkpoint,
+                    os.path.join(out_path, 'weights', f'checkpoint_{epoch}.pt'))
 
         # UPDATE LOOP STATE.
 
@@ -161,20 +188,31 @@ class Runner:
 
         runs.append({
             'epoch': epoch,
-            'train_metrics': train_metrics,
-            'val_metrics': val_metrics,
+            'task1': {
+                'train_metrics': train_metrics[0],
+                'val_metrics': val_metrics[0],
+            },
+            'task2': {
+                'train_metrics': train_metrics[1],
+                'val_metrics': val_metrics[1],
+            }
+            
         })
 
         with open(run_path, 'w') as f:
             json.dump(runs, f, indent=2)
 
-        return improved
+        return improved, best_val_metrics
 
     def _train_step(self, model, train_data, loss_function, optimizer, epoch):
         epoch_loss = 0
         num_batches = 0
-        epoch_gt = []
-        epoch_pred = []
+        
+        epoch_gt_task1 = []
+        epoch_pred_task1 = []
+        
+        epoch_gt_task2 = []
+        epoch_pred_task2 = []
 
         model.train()
 
@@ -184,34 +222,55 @@ class Runner:
 
             loss = loss_function(outputs, targets)
             epoch_loss += loss.item()
-            predictions = torch.argmax(outputs, dim=1)
+            
+            predictions_task1 = torch.argmax(outputs[0], dim=1)
+            predictions_task2 = torch.argmax(outputs[1], dim=1)
 
-            epoch_pred.extend(predictions.tolist())
-            epoch_gt.extend(targets.tolist())
+            epoch_pred_task1.extend(predictions_task1.tolist())
+            epoch_gt_task1.extend(targets[..., 0].tolist())
+            
+            epoch_pred_task2.extend(predictions_task2.tolist())
+            epoch_gt_task2.extend(targets[..., 1].tolist())
+            
             num_batches += 1
 
             loss.backward()
             optimizer.step()
             optimizer.zero_grad()
 
-        accuracy = accuracy_score(epoch_gt, epoch_pred)
-        precision, recall, micro_fi, _ = precision_recall_fscore_support(
-            epoch_gt, epoch_pred, average='micro')
+        accuracy_task1 = accuracy_score(epoch_gt_task1, epoch_pred_task1)
+        precision_task1, recall_task1, macro_f1_task1, _ = precision_recall_fscore_support(
+            epoch_gt_task1, epoch_pred_task1, average='macro')
+        
+        accuracy_task2 = accuracy_score(epoch_gt_task2, epoch_pred_task2)
+        precision_task2, recall_task2, macro_f1_task2, _ = precision_recall_fscore_support(
+            epoch_gt_task2, epoch_pred_task2, average='macro')
+        
         epoch_loss /= num_batches
 
         return {
-            'accuracy': accuracy,
-            'precision': precision,
-            'recall': recall,
-            'micro_f1': micro_fi,
+            'accuracy': accuracy_task1,
+            'precision': precision_task1,
+            'recall': recall_task1,
+            'macro_f1': macro_f1_task1,
+            'loss': epoch_loss,
+        }, {
+            'accuracy': accuracy_task2,
+            'precision': precision_task2,
+            'recall': recall_task2,
+            'macro_f1': macro_f1_task2,
             'loss': epoch_loss,
         }
 
     def _val_step(self, model, val_data, loss_function, epoch):
         epoch_loss = 0
         num_batches = 0
-        epoch_gt = []
-        epoch_pred = []
+        
+        epoch_gt_task1 = []
+        epoch_pred_task1 = []
+        
+        epoch_gt_task2 = []
+        epoch_pred_task2 = []
 
         model.eval()
         with torch.no_grad():
@@ -221,22 +280,39 @@ class Runner:
 
                 loss = loss_function(outputs, targets)
                 epoch_loss += loss.item()
-                predictions = torch.argmax(outputs, dim=1)
+                
+                predictions_task1 = torch.argmax(outputs[0], dim=1)
+                predictions_task2 = torch.argmax(outputs[1], dim=1)
 
-                epoch_pred.extend(predictions.tolist())
-                epoch_gt.extend(targets.tolist())
+                epoch_pred_task1.extend(predictions_task1.tolist())
+                epoch_gt_task1.extend(targets[..., 0].tolist())
+                
+                epoch_pred_task2.extend(predictions_task2.tolist())
+                epoch_gt_task2.extend(targets[..., 1].tolist())
+
                 num_batches += 1
 
-        accuracy = accuracy_score(epoch_gt, epoch_pred)
-        precision, recall, micro_fi, _ = precision_recall_fscore_support(
-            epoch_gt, epoch_pred, average='micro')
+        accuracy_task1 = accuracy_score(epoch_gt_task1, epoch_pred_task1)
+        precision_task1, recall_task1, macro_f1_task1, _ = precision_recall_fscore_support(
+            epoch_gt_task1, epoch_pred_task1, average='macro')
+        
+        accuracy_task2 = accuracy_score(epoch_gt_task2, epoch_pred_task2)
+        precision_task2, recall_task2, macro_f1_task2, _ = precision_recall_fscore_support(
+            epoch_gt_task2, epoch_pred_task2, average='macro')
+        
         epoch_loss /= num_batches
 
         return {
-            'accuracy': accuracy,
-            'precision': precision,
-            'recall': recall,
-            'micro_f1': micro_fi,
+            'accuracy': accuracy_task1,
+            'precision': precision_task1,
+            'recall': recall_task1,
+            'macro_f1': macro_f1_task1,
+            'loss': epoch_loss,
+        }, {
+            'accuracy': accuracy_task2,
+            'precision': precision_task2,
+            'recall': recall_task2,
+            'macro_f1': macro_f1_task2,
             'loss': epoch_loss,
         }
 
@@ -279,7 +355,7 @@ class Runner:
                 'accuracy': state['best_val_accuracy'],
                 'precision': state['best_val_precision'],
                 'recall': state['best_val_recall'],
-                'micro_f1': state['best_val_micro_f1'],
+                'macro_f1': state['best_val_macro_f1'],
                 'loss': state['best_val_loss'],
             }
             current_epoch = state['checkpoint_epoch'] + 1
@@ -289,7 +365,7 @@ class Runner:
                 'accuracy': 0,
                 'precision': 0,
                 'recall': 0,
-                'micro_f1': 0,
+                'macro_f1': 0,
                 'loss': np.inf,
             }
             current_epoch = 0
@@ -304,8 +380,9 @@ class Runner:
             val_metrics = self._val_step(model, val_data, loss_function,
                                          current_epoch)
 
-            self._log_epoch(train_metrics, val_metrics, best_val_metrics, model,
-                            optimizer, current_epoch)
+            _, best_val_metrics = self._log_epoch(train_metrics, val_metrics,
+                                                  best_val_metrics, model,
+                                                  optimizer, current_epoch)
 
             current_epoch += 1
 

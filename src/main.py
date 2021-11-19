@@ -2,17 +2,19 @@ import os
 
 import hydra
 
-from runner import train, test
+import runners
 
 
 @hydra.main(config_path='configs/', config_name='config')
 def main(config):
     os.chdir(hydra.utils.get_original_cwd())
 
+    runner = getattr(runners, config.training.file)
+
     if config.action == 'train':
-        train(config)
+        runner.train(config)
     elif config.action == 'test':
-        test(config)
+        runner.test(config)
 
 
 if __name__ == '__main__':

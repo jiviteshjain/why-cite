@@ -7,7 +7,7 @@ dataloaders:
 
   acl_arc:
     special_tokens: ['@CITATION', '@citation']
-    context: "extended"  # extended/normal
+    context: "normal"  # extended/normal
     section_in_target: True
   
   scicite:
@@ -19,9 +19,10 @@ losses:
 
   multi_task_weighted_cross_entropy:
     num_tasks: 2
-    importance: [1, 0.02]
+    importance: [1, 0.08]
     weights:
-      - [0.30435841, 1.34843581, 2.91375291, 7.57575758, 1.78062678, 1.06837607]
+      - [1.96, 25, 5.263, 20, 5.56, 25]
+      # - [0.30435841, 1.34843581, 2.91375291, 7.57575758, 1.78062678, 1.06837607]
       - [3.20303605313093, 6.298507462686567, 15.486238532110091, 7.033333333333333, 21.367088607594937, 3.6301075268817202]
 
 models:
@@ -37,9 +38,11 @@ models:
     pretrained_identifier: "allenai/scibert_scivocab_uncased"
 
 training:
+  file: "runner_multi_task"
+
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "acl_scibert_multitask"  # Keep this meaningful.
+  run_name: "test_multi_task"  # Keep this meaningful.
   trained_by: "jivitesh"
   trained_on: "joey"
   force_cold_start: True
@@ -49,12 +52,14 @@ training:
   loss_in_use: "multi_task_weighted_cross_entropy"
 
   wandb:
-    use: False
+    use: True
     entity: "why-cite"  # Do not change.
     project: "ours"  # Do not change.
 
+  save_weights: True
+
   num_epochs: 10
-  learning_rate: 1e-4
+  learning_rate: 1e-5
   train_batch_size: 4
   val_batch_size: 4
   num_workers: 0
