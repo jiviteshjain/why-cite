@@ -13,9 +13,9 @@ from sklearn.metrics import precision_recall_fscore_support, accuracy_score
 import wandb
 from omegaconf import OmegaConf
 
-from models import models
-from dataloaders import dataloaders
-from losses import losses
+import models
+import dataloaders
+import losses
 
 
 class Runner:
@@ -363,7 +363,7 @@ class Runner:
 
         # GET LOSS FUNCTION AND OPTIMIZER.
 
-        loss_function = losses(self._config.training.loss_in_use, self._config,
+        loss_function = getattr(losses, self._config.training.loss_in_use)(self._config,
                                self._device)
 
         # Optimizer isn't configurable because who tf changes it.

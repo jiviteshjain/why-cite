@@ -8,7 +8,7 @@ dataloaders:
   acl_arc:
     special_tokens: ['@CITATION', '@citation']
     context: "normal"  # extended/normal
-    section_in_target: True
+    section_in_target: False
   
   scicite:
     section_in_target: True
@@ -41,27 +41,27 @@ training:
 
   out_base_path: "out/"  # The run name will be auto-appended.
   
-  run_name: "test_multi_task"  # Keep this meaningful.
+  run_name: "test_single_task"  # Keep this meaningful.
   trained_by: "jivitesh"
   trained_on: "joey"
   force_cold_start: True
 
-  runner_in_use: "runner_multi_task"
-  model_in_use: "two_task_transformer"
+  runner_in_use: "runner"
+  model_in_use: "maheshwari_et_al"
   dataset_in_use: "acl_arc"
-  loss_in_use: "multi_task_weighted_cross_entropy"
+  loss_in_use: "weighted_cross_entropy"
 
   wandb:
     use: True
     entity: "why-cite"  # Do not change.
     project: "ours"  # Do not change.
 
-  save_weights: True
+  save_weights: False
 
-  num_epochs: 10
+  num_epochs: 5
   learning_rate: 1e-5
   lr_decay_factor: 1e-1  # Set to 1 to turn off.
-  lr_decay_epochs: [3, 8]
+  lr_decay_epochs: [3]
   weight_decay: 0.01  # Set to 0 to turn off.
   train_batch_size: 4
   val_batch_size: 4

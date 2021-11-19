@@ -33,12 +33,3 @@ def multi_task_weighted_cross_entropy(config, device):
         return loss
 
     return compute
-
-
-def losses(loss, config, device):
-    getters = {
-        'weighted_cross_entropy': weighted_cross_entropy,
-        'multi_task_weighted_cross_entropy': multi_task_weighted_cross_entropy,
-    }
-
-    return getters[loss](config, device)
