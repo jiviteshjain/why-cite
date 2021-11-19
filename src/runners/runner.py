@@ -111,8 +111,10 @@ class Runner:
 
         if self._config.training.wandb.use:
             wandb.log({
-                'train_metrics': train_metrics,
-                'val_metrics': val_metrics
+                'task1': {
+                    'train_metrics': train_metrics,
+                    'val_metrics': val_metrics,
+                },
             })
 
             if improved:
@@ -247,12 +249,13 @@ class Runner:
     def train(self, restore=False):
         # GET MODEL, DATASETS, DATALOADERS.
 
-        model, tokenizer, max_length = models(
-            self._config.training.model_in_use, self._config, self._device)
+        model, tokenizer, max_length = getattr(
+            models, self._config.training.model_in_use).get_model(
+                self._config, self._device)
 
-        train_set, val_set, _ = dataloaders(
-            self._config.training.dataset_in_use, self._config, tokenizer,
-            max_length)
+        train_set, val_set, _ = getattr(
+            dataloaders, self._config.training.dataset_in_use).get_dataset(
+                self._config, tokenizer, max_length)
 
         train_data = DataLoader(
             train_set,
