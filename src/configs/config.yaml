@@ -38,7 +38,6 @@ models:
     pretrained_identifier: "allenai/scibert_scivocab_uncased"
 
 training:
-  file: "runner_multi_task"
 
   out_base_path: "out/"  # The run name will be auto-appended.
   
@@ -47,6 +46,7 @@ training:
   trained_on: "joey"
   force_cold_start: True
 
+  runner_in_use: "runner_multi_task"
   model_in_use: "two_task_transformer"
   dataset_in_use: "acl_arc"
   loss_in_use: "multi_task_weighted_cross_entropy"

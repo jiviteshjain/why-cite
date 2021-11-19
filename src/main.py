@@ -9,7 +9,7 @@ import runners
 def main(config):
     os.chdir(hydra.utils.get_original_cwd())
 
-    runner = getattr(runners, config.training.file)
+    runner = getattr(runners, config.training.runner_in_use)
 
     if config.action == 'train':
         runner.train(config)
