@@ -79,33 +79,53 @@ class Runner:
             #
             'checkpoint_epoch': checkpoint['epoch'],
             #
-            'task_1' : {
-                'checkpoint_val_loss': checkpoint['task1_val_loss'],
-                'checkpoint_val_accuracy': checkpoint['task1_val_accuracy'],
-                'checkpoint_val_macro_f1': checkpoint['task1_val_macro_f1'],
-                'checkpoint_val_precision': checkpoint['task1_val_precision'],
-                'checkpoint_val_recall': checkpoint['task1_val_recall'],
+            'task_1': {
+                'checkpoint_val_loss':
+                    checkpoint['task1_val_loss'],
+                'checkpoint_val_accuracy':
+                    checkpoint['task1_val_accuracy'],
+                'checkpoint_val_macro_f1':
+                    checkpoint['task1_val_macro_f1'],
+                'checkpoint_val_precision':
+                    checkpoint['task1_val_precision'],
+                'checkpoint_val_recall':
+                    checkpoint['task1_val_recall'],
                 #
-                'checkpoint_train_loss': checkpoint['task1_train_loss'],
-                'checkpoint_train_accuracy': checkpoint['task1_train_accuracy'],
-                'checkpoint_train_macro_f1': checkpoint['task1_train_macro_f1'],
-                'checkpoint_train_precision': checkpoint['task1_train_precision'],
-                'checkpoint_train_recall': checkpoint['task1_train_recall'],
-            }, 
+                'checkpoint_train_loss':
+                    checkpoint['task1_train_loss'],
+                'checkpoint_train_accuracy':
+                    checkpoint['task1_train_accuracy'],
+                'checkpoint_train_macro_f1':
+                    checkpoint['task1_train_macro_f1'],
+                'checkpoint_train_precision':
+                    checkpoint['task1_train_precision'],
+                'checkpoint_train_recall':
+                    checkpoint['task1_train_recall'],
+            },
             #
-            'task_2' : {
-                'checkpoint_val_loss': checkpoint['task2_val_loss'],
-                'checkpoint_val_accuracy': checkpoint['task2_val_accuracy'],
-                'checkpoint_val_macro_f1': checkpoint['task2_val_macro_f1'],
-                'checkpoint_val_precision': checkpoint['task2_val_precision'],
-                'checkpoint_val_recall': checkpoint['task2_val_recall'],
+            'task_2': {
+                'checkpoint_val_loss':
+                    checkpoint['task2_val_loss'],
+                'checkpoint_val_accuracy':
+                    checkpoint['task2_val_accuracy'],
+                'checkpoint_val_macro_f1':
+                    checkpoint['task2_val_macro_f1'],
+                'checkpoint_val_precision':
+                    checkpoint['task2_val_precision'],
+                'checkpoint_val_recall':
+                    checkpoint['task2_val_recall'],
                 #
-                'checkpoint_train_loss': checkpoint['task2_train_loss'],
-                'checkpoint_train_accuracy': checkpoint['task2_train_accuracy'],
-                'checkpoint_train_macro_f1': checkpoint['task2_train_macro_f1'],
-                'checkpoint_train_precision': checkpoint['task2_train_precision'],
-                'checkpoint_train_recall': checkpoint['task2_train_recall'],
-            }, 
+                'checkpoint_train_loss':
+                    checkpoint['task2_train_loss'],
+                'checkpoint_train_accuracy':
+                    checkpoint['task2_train_accuracy'],
+                'checkpoint_train_macro_f1':
+                    checkpoint['task2_train_macro_f1'],
+                'checkpoint_train_precision':
+                    checkpoint['task2_train_precision'],
+                'checkpoint_train_recall':
+                    checkpoint['task2_train_recall'],
+            },
         }
 
     def _log_epoch(self, train_metrics, val_metrics, best_val_metrics, model,
@@ -157,8 +177,9 @@ class Runner:
             for k, v in val_metrics[1].items():
                 checkpoint[f'task2_val_{k}'] = v
 
-            torch.save(checkpoint,
-                    os.path.join(out_path, 'weights', f'checkpoint_{epoch}.pt'))
+            torch.save(
+                checkpoint,
+                os.path.join(out_path, 'weights', f'checkpoint_{epoch}.pt'))
 
         # UPDATE LOOP STATE.
 
@@ -196,7 +217,6 @@ class Runner:
                 'train_metrics': train_metrics[1],
                 'val_metrics': val_metrics[1],
             }
-            
         })
 
         with open(run_path, 'w') as f:
@@ -207,10 +227,10 @@ class Runner:
     def _train_step(self, model, train_data, loss_function, optimizer, epoch):
         epoch_loss = 0
         num_batches = 0
-        
+
         epoch_gt_task1 = []
         epoch_pred_task1 = []
-        
+
         epoch_gt_task2 = []
         epoch_pred_task2 = []
 
@@ -222,16 +242,16 @@ class Runner:
 
             loss = loss_function(outputs, targets)
             epoch_loss += loss.item()
-            
+
             predictions_task1 = torch.argmax(outputs[0], dim=1)
             predictions_task2 = torch.argmax(outputs[1], dim=1)
 
             epoch_pred_task1.extend(predictions_task1.tolist())
             epoch_gt_task1.extend(targets[..., 0].tolist())
-            
+
             epoch_pred_task2.extend(predictions_task2.tolist())
             epoch_gt_task2.extend(targets[..., 1].tolist())
-            
+
             num_batches += 1
 
             loss.backward()
@@ -241,11 +261,11 @@ class Runner:
         accuracy_task1 = accuracy_score(epoch_gt_task1, epoch_pred_task1)
         precision_task1, recall_task1, macro_f1_task1, _ = precision_recall_fscore_support(
             epoch_gt_task1, epoch_pred_task1, average='macro')
-        
+
         accuracy_task2 = accuracy_score(epoch_gt_task2, epoch_pred_task2)
         precision_task2, recall_task2, macro_f1_task2, _ = precision_recall_fscore_support(
             epoch_gt_task2, epoch_pred_task2, average='macro')
-        
+
         epoch_loss /= num_batches
 
         return {
@@ -265,10 +285,10 @@ class Runner:
     def _val_step(self, model, val_data, loss_function, epoch):
         epoch_loss = 0
         num_batches = 0
-        
+
         epoch_gt_task1 = []
         epoch_pred_task1 = []
-        
+
         epoch_gt_task2 = []
         epoch_pred_task2 = []
 
@@ -280,13 +300,13 @@ class Runner:
 
                 loss = loss_function(outputs, targets)
                 epoch_loss += loss.item()
-                
+
                 predictions_task1 = torch.argmax(outputs[0], dim=1)
                 predictions_task2 = torch.argmax(outputs[1], dim=1)
 
                 epoch_pred_task1.extend(predictions_task1.tolist())
                 epoch_gt_task1.extend(targets[..., 0].tolist())
-                
+
                 epoch_pred_task2.extend(predictions_task2.tolist())
                 epoch_gt_task2.extend(targets[..., 1].tolist())
 
@@ -295,11 +315,11 @@ class Runner:
         accuracy_task1 = accuracy_score(epoch_gt_task1, epoch_pred_task1)
         precision_task1, recall_task1, macro_f1_task1, _ = precision_recall_fscore_support(
             epoch_gt_task1, epoch_pred_task1, average='macro')
-        
+
         accuracy_task2 = accuracy_score(epoch_gt_task2, epoch_pred_task2)
         precision_task2, recall_task2, macro_f1_task2, _ = precision_recall_fscore_support(
             epoch_gt_task2, epoch_pred_task2, average='macro')
-        
+
         epoch_loss /= num_batches
 
         return {

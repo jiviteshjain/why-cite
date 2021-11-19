@@ -8,11 +8,7 @@ import jsonlines
 from torch.utils.data import DataLoader, Dataset
 from torch import cuda
 
-INTENT_CATEGORY_MAP = {
-    'background': 0,
-    'method': 1,
-    'result': 2
-}
+INTENT_CATEGORY_MAP = {'background': 0, 'method': 1, 'result': 2}
 
 SECTION_CATEGORY_MAP = {
     'introduction': 0,
@@ -72,11 +68,8 @@ class SciCiteDataset(Dataset):
                                                   **tokenizer_args)
 
         citation_context = self._tokenizer.encode_plus(row['string'],
-                                                           text_pair=None,
-                                                           **tokenizer_args)
-       
-        # Uncomment this to add section name
-        # section_name = row['section_name']
+                                                       text_pair=None,
+                                                       **tokenizer_args)
 
         out = {
             'citing_title_ids':

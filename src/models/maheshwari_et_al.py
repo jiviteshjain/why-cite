@@ -14,7 +14,7 @@ class MaheshwariEtAl(torch.nn.Module):
         self._lang_model = lang_model.to(device)
         self._pre_classifier = torch.nn.Linear(768, 768).to(device)
         self._dropout_layer = torch.nn.Dropout(dropout_probability).to(device)
-	# change to 3 when running on scicite dataset
+        # Change to 3 when running on Scicite dataset.
         self._classifier = torch.nn.Linear(768, 6).to(device)
 
     def forward(self, data):
@@ -40,13 +40,15 @@ def get_model(config, device):
         config.models.maheshwari_et_al.pretrained_identifier)
 
     try:
-        special_tokens = [str(x) for x in config.dataloaders[
-            config.training.dataset_in_use].special_tokens]
-        
+        special_tokens = [
+            str(x) for x in config.dataloaders[
+                config.training.dataset_in_use].special_tokens
+        ]
+
         tokenizer.add_special_tokens(
             {'additional_special_tokens': special_tokens})
         lang_model.resize_token_embeddings(len(tokenizer))
-    
+
     except ConfigKeyError:
         pass
 

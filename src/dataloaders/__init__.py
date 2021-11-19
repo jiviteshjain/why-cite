@@ -13,7 +13,6 @@ def dataloaders(dataset, config, tokenizer, max_length):
         'shared_task_3c': shared_task_3c.get_dataset,
         'acl_arc': acl_arc.get_dataset,
         'scicite': scicite.get_dataset,
-
     }
 
     return getters[dataset](config, tokenizer, max_length)

@@ -84,9 +84,6 @@ class ACLARCDataset(Dataset):
             citation_context = self._tokenizer.encode_plus(
                 row['extended_context'], text_pair=None, **tokenizer_args)
 
-        # Uncomment this to add section name
-        # section_name = row['section_name']
-
         out = {
             'citing_title_ids':
                 torch.tensor(citing_title['input_ids'], dtype=torch.long),

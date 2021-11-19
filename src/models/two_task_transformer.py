@@ -60,13 +60,15 @@ def get_model(config, device):
         config.models.two_task_transformer.pretrained_identifier)
 
     try:
-        special_tokens = [str(x) for x in config.dataloaders[
-            config.training.dataset_in_use].special_tokens]
-        
+        special_tokens = [
+            str(x) for x in config.dataloaders[
+                config.training.dataset_in_use].special_tokens
+        ]
+
         tokenizer.add_special_tokens(
             {'additional_special_tokens': special_tokens})
         lang_model.resize_token_embeddings(len(tokenizer))
-    
+
     except ConfigKeyError:
         pass
 

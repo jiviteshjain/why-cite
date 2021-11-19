@@ -130,8 +130,9 @@ class Runner:
             for k, v in val_metrics.items():
                 checkpoint[f'val_{k}'] = v
 
-            torch.save(checkpoint,
-                    os.path.join(out_path, 'weights', f'checkpoint_{epoch}.pt'))
+            torch.save(
+                checkpoint,
+                os.path.join(out_path, 'weights', f'checkpoint_{epoch}.pt'))
 
         # UPDATE LOOP STATE.
 
