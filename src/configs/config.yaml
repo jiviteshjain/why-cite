@@ -60,6 +60,9 @@ training:
 
   num_epochs: 10
   learning_rate: 1e-5
+  lr_decay_factor: 1e-1  # Set to 1 to turn off.
+  lr_decay_epochs: [3, 8]
+  weight_decay: 0.01  # Set to 0 to turn off.
   train_batch_size: 4
   val_batch_size: 4
   num_workers: 0

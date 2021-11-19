@@ -24,7 +24,9 @@ class Runner:
         self._config = config
         self._device = device
 
-    def _restore(self, model, optimizer, which='last', epoch=None):
+    def _restore(self, model, optimizer, scheduler, which='last', epoch=None):
+        # BEST EPOCH IS DEFINED IN TERMS OF TASK 1 VAL MACRO F1 ONLY.
+
         loop_state = torch.load(
             os.path.join(self._config.training.out_base_path,
                          self._config.training.run_name, 'logs',
@@ -66,9 +68,9 @@ class Runner:
 
         model.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+        scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
 
         return {
-            # The 'best' epoch is only defined in terms of val mico f1.
             'best_epoch': loop_state['best_epoch'],
             'best_val_loss': loop_state['best_val_loss'],
             'best_val_accuracy': loop_state['best_val_accuracy'],
@@ -92,7 +94,7 @@ class Runner:
         }
 
     def _log_epoch(self, train_metrics, val_metrics, best_val_metrics, model,
-                   optimizer, epoch):
+                   optimizer, scheduler, epoch):
         # TODO(jiviteshjain): Add confusion matrix plotting.
 
         out_path = os.path.join(self._config.training.out_base_path,
@@ -123,6 +125,7 @@ class Runner:
             checkpoint = {
                 'model_state_dict': model.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
+                'scheduler_state_dict': scheduler.state_dict(),
                 'epoch': epoch,
             }
             for k, v in train_metrics.items():
@@ -169,7 +172,7 @@ class Runner:
         with open(run_path, 'w') as f:
             json.dump(runs, f, indent=2)
 
-        return improved
+        return improved, best_val_metrics
 
     def _train_step(self, model, train_data, loss_function, optimizer, epoch):
         epoch_loss = 0
@@ -268,14 +271,20 @@ class Runner:
                                self._device)
 
         # Optimizer isn't configurable because who tf changes it.
-        optimizer = torch.optim.Adam(params=model.parameters(),
-                                     lr=self._config.training.learning_rate)
-        # TODO(jiviteshjain): Add support for lr scheduler.
+        optimizer = torch.optim.Adam(
+            params=model.parameters(),
+            lr=self._config.training.learning_rate,
+            weight_decay=self._config.training.weight_decay)
+
+        scheduler = torch.optim.lr_scheduler.MultiStepLR(
+            optimizer,
+            milestones=self._config.training.lr_decay_epochs,
+            gamma=self._config.training.lr_decay_factor)
 
         # RESTORE CHECKPOINT OR COLD START.
 
         if restore:
-            state = self._restore(model, optimizer, which='last')
+            state = self._restore(model, optimizer, scheduler, which='last')
             best_val_metrics = {
                 'accuracy': state['best_val_accuracy'],
                 'precision': state['best_val_precision'],
@@ -305,9 +314,12 @@ class Runner:
             val_metrics = self._val_step(model, val_data, loss_function,
                                          current_epoch)
 
-            self._log_epoch(train_metrics, val_metrics, best_val_metrics, model,
-                            optimizer, current_epoch)
+            _, best_val_metrics = self._log_epoch(train_metrics, val_metrics,
+                                                  best_val_metrics, model,
+                                                  optimizer, scheduler,
+                                                  current_epoch)
 
+            scheduler.step()
             current_epoch += 1
 
 
