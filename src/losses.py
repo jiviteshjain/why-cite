@@ -25,10 +25,10 @@ def multi_task_weighted_cross_entropy(config, device):
     ]
 
     def compute(outputs, targets):
-        loss = torch.tensor(0, dtype=torch.float32, device=device)
+        loss = torch.tensor(0, dtype=torch.float32, requires_grad=True, device=device)
 
         for i in range(num_tasks):
-            loss += (importance[i] * losses[i](outputs[i], targets[..., i]))
+            loss = loss + (importance[i] * losses[i](outputs[i], targets[..., i]))
 
         return loss
 
