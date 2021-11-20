@@ -72,7 +72,7 @@ class Runner:
             'best_epoch': loop_state['best_epoch'],
             'best_val_loss': loop_state['best_val_loss'],
             'best_val_accuracy': loop_state['best_val_accuracy'],
-            'best_val_micro_f1': loop_state['best_val_micro_f1'],
+            'best_val_macro_f1': loop_state['best_val_macro_f1'],
             'best_val_precision': loop_state['best_val_precision'],
             'best_val_recall': loop_state['best_val_recall'],
             #
@@ -80,13 +80,13 @@ class Runner:
             #
             'checkpoint_val_loss': checkpoint['val_loss'],
             'checkpoint_val_accuracy': checkpoint['val_accuracy'],
-            'checkpoint_val_micro_f1': checkpoint['val_micro_f1'],
+            'checkpoint_val_macro_f1': checkpoint['val_macro_f1'],
             'checkpoint_val_precision': checkpoint['val_precision'],
             'checkpoint_val_recall': checkpoint['val_recall'],
             #
             'checkpoint_train_loss': checkpoint['train_loss'],
             'checkpoint_train_accuracy': checkpoint['train_accuracy'],
-            'checkpoint_train_micro_f1': checkpoint['train_micro_f1'],
+            'checkpoint_train_macro_f1': checkpoint['train_macro_f1'],
             'checkpoint_train_precision': checkpoint['train_precision'],
             'checkpoint_train_recall': checkpoint['train_recall'],
         }
@@ -100,8 +100,8 @@ class Runner:
 
         # CHECK IF IMPROVED VAL PERFORMANCE.
 
-        improved = val_metrics['micro_f1'] > best_val_metrics[
-            'micro_f1']  # Always true on the first epoch.
+        improved = val_metrics['macro_f1'] > best_val_metrics[
+            'macro_f1']  # Always true on the first epoch.
         if improved:
             best_val_metrics = copy.deepcopy(val_metrics)
 
@@ -195,15 +195,15 @@ class Runner:
             optimizer.zero_grad()
 
         accuracy = accuracy_score(epoch_gt, epoch_pred)
-        precision, recall, micro_fi, _ = precision_recall_fscore_support(
-            epoch_gt, epoch_pred, average='micro')
+        precision, recall, macro_fi, _ = precision_recall_fscore_support(
+            epoch_gt, epoch_pred, average='macro')
         epoch_loss /= num_batches
 
         return {
             'accuracy': accuracy,
             'precision': precision,
             'recall': recall,
-            'micro_f1': micro_fi,
+            'macro_f1': macro_fi,
             'loss': epoch_loss,
         }
 
@@ -228,15 +228,15 @@ class Runner:
                 num_batches += 1
 
         accuracy = accuracy_score(epoch_gt, epoch_pred)
-        precision, recall, micro_fi, _ = precision_recall_fscore_support(
-            epoch_gt, epoch_pred, average='micro')
+        precision, recall, macro_fi, _ = precision_recall_fscore_support(
+            epoch_gt, epoch_pred, average='macro')
         epoch_loss /= num_batches
 
         return {
             'accuracy': accuracy,
             'precision': precision,
             'recall': recall,
-            'micro_f1': micro_fi,
+            'macro_f1': macro_fi,
             'loss': epoch_loss,
         }
 
@@ -279,7 +279,7 @@ class Runner:
                 'accuracy': state['best_val_accuracy'],
                 'precision': state['best_val_precision'],
                 'recall': state['best_val_recall'],
-                'micro_f1': state['best_val_micro_f1'],
+                'macro_f1': state['best_val_macro_f1'],
                 'loss': state['best_val_loss'],
             }
             current_epoch = state['checkpoint_epoch'] + 1
@@ -289,7 +289,7 @@ class Runner:
                 'accuracy': 0,
                 'precision': 0,
                 'recall': 0,
-                'micro_f1': 0,
+                'macro_f1': 0,
                 'loss': np.inf,
             }
             current_epoch = 0
@@ -345,6 +345,10 @@ def train(config):
                    entity=config.training.wandb.entity,
                    config=OmegaConf.to_container(config),
                    resume=resume)
+
+        config.training.learning_rate = dict(wandb.config)["learn_rate"]
+        config.models.maheshwari_et_al.dropout_probability = dict(wandb.config)["dropout"]
+        config.models.maheshwari_et_al.hidden_layer_size = dict(wandb.config)["hidden_layer_size"]
 
     runner = Runner(config, device)
     runner.train(restore)

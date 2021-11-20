@@ -4,16 +4,16 @@ import torch
 
 class MaheshwariEtAl(torch.nn.Module):
 
-    def __init__(self, lang_model, dropout_probability, config, device):
+    def __init__(self, lang_model, dropout_probability, config, device, hidden_layer_size=768):
         super().__init__()
         self._device = device
 
         print(self._device, "is device")
 
         self._lang_model = lang_model.to(device)
-        self._pre_classifier = torch.nn.Linear(768, 768).to(device)
+        self._pre_classifier = torch.nn.Linear(768, hidden_layer_size).to(device)
         self._dropout_layer = torch.nn.Dropout(dropout_probability).to(device)
-        self._classifier = torch.nn.Linear(768, 6).to(device)
+        self._classifier = torch.nn.Linear(hidden_layer_size, 6).to(device)
         self._config = config
 
     def forward(self, data):
@@ -49,4 +49,4 @@ def get_model(config, device):
 
     return MaheshwariEtAl(
         lang_model, config.models.maheshwari_et_al.dropout_probability, config,
-        device), tokenizer, config.models.maheshwari_et_al.max_length
+        device, config.models.maheshwari_et_al.hidden_layer_size), tokenizer, config.models.maheshwari_et_al.max_length

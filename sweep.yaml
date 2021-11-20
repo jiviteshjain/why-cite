@@ -1,0 +1,21 @@
+program: src/main.py
+method: random
+metric:
+  goal: minimize
+  name: val_metrics.loss
+parameters:
+  dropout:
+    values: [0.15, 0.2, 0.25, 0.3, 0.4]
+  hidden_layer_size:
+    values: [96, 128, 200, 250, 300, 400, 500, 700, 800]
+  learn_rate:
+    values: [0.00001, 0.00003, 0.00005, 0.00007, 0.00009]
+early_terminate:
+  type: hyperband
+  s: 2
+  eta: 3
+  max_iter: 20
+command:
+    - python
+    - ${program}
+    - "+action=train"

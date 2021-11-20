@@ -5,7 +5,7 @@ import hydra
 from runner import train, test
 
 
-@hydra.main(config_path='configs/', config_name='acl_arc_extended_new_weight')
+@hydra.main(config_path='configs/', config_name='acl_arc_normal_new_weight')
 def main(config):
     os.chdir(hydra.utils.get_original_cwd())
 
